@@ -6,8 +6,8 @@
 
 TP de Desarrollo de Software - Valorant player and match tracker. Ingeniería en Sistemas de Información UTN FRRo. 
 
-- Cristian Gerster  -  43855
-- German Cirigliano -  43816
+- [Cristian Gerster](https://github.com/ProDIGGY-vinilos)  -  43855
+- [German Cirigliano](https://github.com/germancirigliano) -  43816 
 - José Socolsky      -  48128
 
 Repositorio de GitHub: https://github.com/JosepSoc/valorant-tracker-dsw
