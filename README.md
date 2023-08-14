@@ -12,21 +12,43 @@ TP de Desarrollo de Software - Valorant player and match tracker. Ingeniería en
 
 Repositorio de GitHub: https://github.com/JosepSoc/valorant-tracker-dsw
 
-
-## Checklist 
-| Requerimiento funcional                | Cant.      | Detalle |
-| -------------                          | ---------- | ------------------------------------ |
-| ABMC Simple                            | 1 x integ  | Usuario, Agente y Armas                 |
-|ABMC Dependiente                        | 2          | Habilidades y Rol                            |
-| Listado simple                         | 1          | Leaderboard regional de partidas competitivas|
-| Listado complejo obligatorio           | 1          | Historial de partidas y Armas por tipo|
-| Detalle básico                         | 1          | Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api)|
-| Detalle parametrizable                 | 1          | Materias para inscripción o estado académico|
+## Tema
+### Descripción:
+Recopilador de estadisticas del juego de Riot Games VALORANT, usando la API no oficial de Henrik-3 se trackearan historial de partidas por usuario,
+se mostraran rankings regionales por rango competitivo, se buscara dar datos precisos de partidas individuales por jugador mos-
+trando al usuario unresumen de su desempeño en la temporada como tambien los agentes con los que se destacó.
+### Modelo de Datos:
+![DER](https://github.com/JosepSoc/valorant-tracker-dsw/assets/102441209/c83343ef-65ee-41e0-95ec-f166756d2f9b)
 
 
+## Alcance funcional
+
+### Alcance Mínimo
+| Requerimiento funcional                | Detalle |
+| -------------                          | -------------------------------------------------------------------------------------------------------------------------------------- |
+| CRUD Simple                            | Usuario, Agente y Armas                                                                                                                |
+| CRUD Dependiente                       | Habilidades(agente) y Rol(agente)                                                                                                      |
+| Listado simple                         | Leaderboard regional de partidas competitivas                                                                                          |
+| Listado complejo                       | (a)Historial de partidas(mapa) y (b)Armas por tipo(tipo de arma)                                                                       |            
+| Detalle por lista compleja                 | (a)Asesinatos de agente por ronda (b) Asesinatos con arma de las ultimas x partidas                                                |
+| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Caso de uso de ejemplo 2|
+
+### Alcance Adicional
+| Requerimiento funcional                | Detalle |
+| -------------                          | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CRUD                                   | 1-CRUD Usuario <br> 2-CRUD Agente <br> 3-CRUD Arma <br> 4-CRUD Rol <br> 5-CRUD Habilidades <br> 6-CRUD Tipo de Arma <br>                                                 |
+| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Caso de uso de ejemplo 2 <br> 3- Caso de uso de ejemplo 3 |
+
+### Alcance Adicional Voluntario 
+| Requerimiento funcional                | Detalle |
+| -------------                          | ---------|
+| Listados                               | TBD  |
+| CRUD                                   | TBD  |
+| CUU/Epic                               | TBD  |
+
+                                                                                                                                            
 
 
 
 
-## Modelo de Datos (Diagrama Entidad-Relación):
-(a incluir post hacer DER) 
+
