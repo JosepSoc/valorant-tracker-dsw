@@ -31,7 +31,7 @@ trando al usuario unresumen de su desempeño en la temporada como tambien los ag
 | Listado simple                         | Leaderboard regional de partidas competitivas                                                                                          |
 | Listado complejo                       | (a)Historial de partidas(mapa) y (b)Armas por tipo(tipo de arma)                                                                       |            
 | Detalle por lista compleja                 | (a)Asesinatos de agente por ronda (b) Asesinatos con arma de las ultimas x partidas                                                |
-| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Caso de uso de ejemplo 2|
+| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Ratio de victorias por mapa de ultimas partidas|
 
 ### Alcance Adicional
 | Requerimiento funcional                | Detalle |
