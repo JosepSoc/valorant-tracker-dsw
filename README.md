@@ -18,7 +18,7 @@ Recopilador de estadisticas del juego de Riot Games VALORANT, usando la API no o
 se mostraran rankings regionales por rango competitivo, se buscara dar datos precisos de partidas individuales por jugador mos-
 trando al usuario unresumen de su desempeño en la temporada como tambien los agentes con los que se destacó.
 ### Modelo de Datos:
-![DER](https://github.com/JosepSoc/valorant-tracker-dsw/assets/102441209/c83343ef-65ee-41e0-95ec-f166756d2f9b)
+![DER]([https://github.com/JosepSoc/valorant-tracker-dsw/assets/102441209/c83343ef-65ee-41e0-95ec-f166756d2f9b](https://drive.google.com/file/d/1XREQpf451VtYeWZ7xS3qii-O2p9Nf2V5/view?usp=drive_link))
 
 
 ## Alcance funcional
