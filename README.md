@@ -37,7 +37,7 @@ trando al usuario unresumen de su desempeño en la temporada como tambien los ag
 | Requerimiento funcional                | Detalle |
 | -------------                          | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | CRUD                                   | 1-CRUD Usuario <br> 2-CRUD Agente <br> 3-CRUD Arma <br> 4-CRUD Rol <br> 5-CRUD Habilidades <br> 6-CRUD Tipo de Arma <br>                                                 |
-| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Caso de uso de ejemplo 2 <br> 3- Caso de uso de ejemplo 3 |
+| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Caso de uso de ejemplo 2 <br> 3- Desempeño en Premier mode |
 
 ### Alcance Adicional Voluntario 
 | Requerimiento funcional                | Detalle |
