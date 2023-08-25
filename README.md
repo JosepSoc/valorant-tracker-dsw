@@ -37,7 +37,7 @@ https://drive.google.com/file/d/1XREQpf451VtYeWZ7xS3qii-O2p9Nf2V5/view?usp=drive
 | Requerimiento funcional                | Detalle |
 | -------------                          | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | CRUD                                   | 1-CRUD Usuario <br> 2-CRUD Agente <br> 3-CRUD Arma <br> 4-CRUD Rol <br> 5-CRUD Habilidades <br> 6-CRUD Tipo de Arma <br>                                                 |
-| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Caso de uso de ejemplo 2 <br> 3- Desempeño en Premier mode |
+| CUU/Epic                               | 1- Partidas traidas por [unofficial-valorant-api](https://github.com/Henrik-3/unofficial-valorant-api) <br> 2- Ratio de victorias por mapa de ultimas partidas <br> 3- Desempeño en Premier mode |
 
 ### Alcance Adicional Voluntario 
 | Requerimiento funcional                | Detalle |
