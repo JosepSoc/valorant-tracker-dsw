@@ -1,0 +1,43 @@
+###GET all users
+GET http://localhost:5000/api/users/
+
+###GET one user
+GET http://localhost:5000/api/users/qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkZsacbeKBqSdkUEaYOcYNjDomm60vMrLWHu4ulYg1C5Q
+
+###POST
+POST http://localhost:5000/api/users/
+
+Content-Type: application/json
+{
+  "puuid": "qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkZsacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q",
+  "name_lastname": "Pepito Perez",
+  "email": "pepito@gmail.com",
+  "crosshair": "0;P;c;5;o;1;d;1;0b;0",
+  "password": "apple"
+}
+
+###PUT
+PUT http://localhost:5000/api/users/
+Content-Type: application/json
+
+{
+  "name": "Sol Badguy",
+  "characterAssoc": "Bounty Hunter",
+  "difficulty": 3,
+  "hp": 90,
+  "speed": 70,
+  "items": ["Outrage","Supressor Band", "Sin's Lunch Money"]
+}
+
+###Patch
+PATCH http://localhost:5000/api/users/
+Content-Type: application/json
+
+{
+  "characterAssoc": "Bounty Hunter",
+  "speed": 30,
+  "items": ["Outrage","Fire-Wheel Mk. II", "Sin's Lunch Money"]
+}
+
+###DELETE
+DELETE http://localhost:5000/api/users/
