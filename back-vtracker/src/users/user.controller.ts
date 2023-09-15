@@ -38,6 +38,7 @@ export function findOne(req: Request, res: Response){
 }
 
 export function add(req: Request, res: Response){
+  
   const {puuid, name_lastname, email, crosshair, password}=req.body.sanitizedInputData;
   const u = new User(puuid, name_lastname, email, crosshair, password);
   const u_Created=repository.add(u);

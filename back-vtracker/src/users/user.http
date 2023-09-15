@@ -2,14 +2,14 @@
 GET http://localhost:5000/api/users/
 
 ###GET one user
-GET http://localhost:5000/api/users/qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkZsacbeKBqSdkUEaYOcYNjDomm60vMrLWHu4ulYg1C5Q
+GET http://localhost:5000/api/users/qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkttacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q
 
 ###POST
 POST http://localhost:5000/api/users/
-
 Content-Type: application/json
+
 {
-  "puuid": "qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkZsacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q",
+  "puuid": "qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkttacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q",
   "name_lastname": "Pepito Perez",
   "email": "pepito@gmail.com",
   "crosshair": "0;P;c;5;o;1;d;1;0b;0",
