@@ -15,7 +15,7 @@ Thumbs.db
 dist/**/*
 
 # test http rest client
-.src/users/user.http
+src/users/user.http
 
 # vscode
 .vscode/*
