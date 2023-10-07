@@ -5,12 +5,12 @@ export const userRouter = Router();
 
 userRouter.get('/', findAll);
 
-userRouter.get('/:puuid', findOne);
+userRouter.get('/:id', findOne);
 
 userRouter.post('/', sanitizeUserInput, add);
 
-userRouter.put('/:puuid', sanitizeUserInput, update);
+userRouter.put('/:id', sanitizeUserInput, update);
 
-userRouter.patch('/:puuid', sanitizeUserInput, update);
+userRouter.patch('/:id', sanitizeUserInput, update);
 
-userRouter.delete('/:puuid', remove);
+userRouter.delete('/:id', remove);

@@ -24,12 +24,12 @@ export function sanitizeUserInput(req: Request, res:Response, next:NextFunction)
 }
 
 
-export function findAll(req: Request, res: Response){
-  res.json({ data: repository.findAll() });
+export async function findAll(req: Request, res: Response){
+  res.json({ data: await repository.findAll() });
 }
 
-export function findOne(req: Request, res: Response){
-  const user = repository.findOne( {id: req.params.puuid} );
+export async function findOne(req: Request, res: Response){
+  const user = await repository.findOne( {id: req.params.puuid} );
   if(!user){
     res.status(404).send({message:'User not found'});
   }else{
@@ -37,17 +37,17 @@ export function findOne(req: Request, res: Response){
   }
 }
 
-export function add(req: Request, res: Response){
+export async function add(req: Request, res: Response){
   
   const {puuid, name_lastname, email, crosshair, password}=req.body.sanitizedInputData;
   const u = new User(puuid, name_lastname, email, crosshair, password);
-  const u_Created=repository.add(u);
+  const u_Created=await repository.add(u);
   return res.status(201).send({message:'User created', data: u_Created});
 }
 
-export function update(req: Request, res: Response){
-  req.body.sanitizedInputData.puuid=req.params.puuid;
-  const u_Modified = repository.update(req.body.sanitizedInputData);
+export async function update(req: Request, res: Response){
+  console.log(req.params.id);
+  const u_Modified = await repository.update(req.params.id, req.body.sanitizedInputData);
   
   if(u_Modified === undefined){
     return res.status(404).send({message:'User not found'});
@@ -55,12 +55,12 @@ export function update(req: Request, res: Response){
   return res.status(200).send({message:'User correctly modified', data: u_Modified});
 }
 
-export function remove(req: Request, res: Response){
-  const u_Deleted = repository.delete( {id: req.params.puuid} );
+export async function remove(req: Request, res: Response){
+  const u_Deleted = await repository.delete( {id: req.params.id} );
 
   if(u_Deleted===undefined){
-    res.status(404).send({message:'User with this PUUID does not exist', data: req.params.puuid});
+    res.status(404).send({message:'User with this oId does not exist', data: req.params.id});
   } else{
-    res.status(200).send({message:'User succesfully deleted', data: u_Deleted.puuid});
+    res.status(200).send({message:'User succesfully deleted', data: req.params.id});
   }
 }

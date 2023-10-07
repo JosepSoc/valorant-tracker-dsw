@@ -1,43 +1,35 @@
 import { Repository } from "../shared/repository.js";
 import { User } from "./user.entity.js";
+import { db } from "../shared/db/connection.js";
+import { ObjectId } from "mongodb";
 
-const users = [
-  new User('qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkZsacbeKBqSdkUEaYOcYNjDomm60vMrLWHu4ulYg1C5Q', 'Jose Soco', 'josepe@gmail.com', '0;P;c;5;o;1;d;1;0b;0;1b;0', 'password'),
-  new User('qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkZsacbeKBqSdkUEaYOcYNjDomm40yMrLWHu4ulYg1C5Q', 'Santi Montedeoca', 'sag@gmail.com', '0;P;h;0;0l;4;0o;0;0a;1;0f;0;1b;0', 'elmas pollera'),
-];
+
+const users = db.collection<User>('users');
 
 export class UserRepository implements Repository<User> {
 
-  public findAll(): User[] | undefined{
-    return users;
+  public async findAll(): Promise<User[] | undefined>{
+    return await users.find().toArray();
   }
 
-  public findOne(item: { id: string; }): User | undefined {
-    return users.find((user)=> user.puuid === item.id);
+  public async findOne(item: { id: string; }): Promise<User | undefined> {
+    const _id = new ObjectId(item.id);
+    return (await users.findOne({_id})) || undefined;
   }
 
-  public add(item: User): User | undefined {
-    users.push(item);
+  public async add(item: User): Promise<User | undefined> {
+    item._id = (await users.insertOne(item)).insertedId;
     return item;
   }
 
-  public update(item: User): User | undefined {
-    const cIndex = users.findIndex(c=> c.puuid === item.puuid);
-    if(cIndex != -1){
-      users[cIndex] = {...users[cIndex], ...item};
-      return users[cIndex];
-    }
-    return undefined;
+  public async update(id: string, item: User): Promise<User | undefined> {
+    const _id = new ObjectId(id);
+    return await users.findOneAndUpdate( {_id}, {$set: item}, {returnDocument: 'after'}) || undefined;
   }
 
-  public delete(item: { id: string; }): User | undefined {
-    const cIndex = users.findIndex(c=> c.puuid === item.id);
-    if(cIndex!=-1){
-      const c= users[cIndex];
-      users.splice(cIndex, 1);
-      return c;
-    }
-    return undefined;
+  public async delete(item: { id: string; }): Promise<User | undefined> {
+    const _id = new ObjectId(item.id);
+    return (await users.findOneAndDelete({_id})) || undefined;
   }
 
 

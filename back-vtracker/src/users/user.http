@@ -2,7 +2,7 @@
 GET http://localhost:5000/api/users/
 
 ###GET one user
-GET http://localhost:5000/api/users/qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkttacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q
+GET http://localhost:5000/api/users/6520e53b6a92f7537c4ad9ed
 
 ###POST
 POST http://localhost:5000/api/users/
@@ -10,34 +10,33 @@ Content-Type: application/json
 
 {
   "puuid": "qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkttacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q",
-  "name_lastname": "Pepito Perez",
-  "email": "pepito@gmail.com",
+  "name_lastname": "el gordo guma",
+  "email": "gumayusi@gmail.com",
   "crosshair": "0;P;c;5;o;1;d;1;0b;0",
-  "password": "apple"
+  "password": "gangplank"
 }
 
 ###PUT
-PUT http://localhost:5000/api/users/
+PUT http://localhost:5000/api/users/6520f92ccb739eec83fb5628
 Content-Type: application/json
 
 {
-  "name": "Sol Badguy",
-  "characterAssoc": "Bounty Hunter",
-  "difficulty": 3,
-  "hp": 90,
-  "speed": 70,
-  "items": ["Outrage","Supressor Band", "Sin's Lunch Money"]
+  "puuid": "qHn0uNkpA1T-NqQ0zasfasfsafsaNjDomm40yMrLWHu4ulYg1C5Q",
+  "name_lastname": "Santi Montecino",
+  "email": "santimonte@gmail.com",
+  "crosshair": "0;P;c;5;o;1;d;1;0b;0",
+  "password": "homerochino"
 }
 
 ###Patch
-PATCH http://localhost:5000/api/users/
+PATCH http://localhost:5000/api/users/6520f92ccb739eec83fb5628
 Content-Type: application/json
 
 {
-  "characterAssoc": "Bounty Hunter",
-  "speed": 30,
-  "items": ["Outrage","Fire-Wheel Mk. II", "Sin's Lunch Money"]
+  "email": "gumaguma@gmail.com",
+  "crosshair": "0d;1;0b;0",
+  "password": "banana"
 }
 
 ###DELETE
-DELETE http://localhost:5000/api/users/
+DELETE http://localhost:5000/api/users/6520e53b6a92f7537c4ad9ed
