@@ -1,0 +1,34 @@
+###GET all weapons
+GET http://localhost:5000/api/weaponTypes/
+
+###GET one weapon
+GET http://localhost:5000/api/weaponTypes/
+
+###POST
+POST http://localhost:5000/api/weaponTypes/
+Content-Type: application/json
+
+{
+  "cod_weapon_type": "1",
+  "description": "sideArm"
+}
+
+###PUT
+PUT http://localhost:5000/api/weaponTypes/
+Content-Type: application/json
+
+{
+  "cod_weapon_type": "2",
+  "description": "SMGS"
+}
+
+###Patch
+PATCH http://localhost:5000/api/weaponTypes/
+Content-Type: application/json
+
+{
+  "description": "sniperRifle"
+}
+
+###DELETE
+DELETE http://localhost:5000/api/weaponTypes/

@@ -1,4 +1,3 @@
-//import { Agent } from 'src/agents/agent.entity';
 import { ObjectId } from 'mongodb';
 
 export class User{
@@ -8,7 +7,7 @@ export class User{
     public email: string,
     public crosshair: string,
     public password: string,
-    // public nombre_agente: string,
+    // public agentes: string[],
     public _id ?: ObjectId
     )
     {}
