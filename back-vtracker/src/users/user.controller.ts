@@ -29,7 +29,7 @@ export async function findAll(req: Request, res: Response){
 }
 
 export async function findOne(req: Request, res: Response){
-  const user = await repository.findOne( {id: req.params.puuid} );
+  const user = await repository.findOne( {id: req.params.id} );
   if(!user){
     res.status(404).send({message:'User not found'});
   }else{
@@ -46,7 +46,6 @@ export async function add(req: Request, res: Response){
 }
 
 export async function update(req: Request, res: Response){
-  console.log(req.params.id);
   const u_Modified = await repository.update(req.params.id, req.body.sanitizedInputData);
   
   if(u_Modified === undefined){

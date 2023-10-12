@@ -6,8 +6,8 @@ const repository = new WeaponRepository();
 
 export function sanitizeUserInput(req: Request, res:Response, next:NextFunction){
   req.body.sanitizedInputData = {
-    nombre: req.body.nombre,
-    descripcion: req.body.descripcion,
+    name: req.body.name,
+    description: req.body.description,
     //tipo: req.body.tipo,
   }
 
@@ -25,7 +25,7 @@ export async function findAll(req: Request, res: Response){
 }
 
 export async function findOne(req: Request, res: Response){
-  const weapon = await repository.findOne( {id: req.params.name} );
+  const weapon = await repository.findOne( {id: req.params.id} );
   if(!weapon){
     res.status(404).send({message:'Weapon not found'});
   }else{
@@ -42,7 +42,6 @@ export async function add(req: Request, res: Response){
 }
 
 export async function update(req: Request, res: Response){
-  console.log(req.params.id);
   const w_Modified = await repository.update(req.params.id, req.body.sanitizedInputData);
   
   if(w_Modified === undefined){

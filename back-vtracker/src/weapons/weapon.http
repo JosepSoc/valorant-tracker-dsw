@@ -1,0 +1,34 @@
+###GET all weapons
+GET http://localhost:5000/api/weapons/
+
+###GET one weapon
+GET http://localhost:5000/api/weapons/652835d6c017778e4cce8c88
+
+###POST
+POST http://localhost:5000/api/weapons/
+Content-Type: application/json
+
+{
+  "name": "Classic",
+  "description": "Secondary weapon, good for close combat, cost 0 credits"
+}
+
+###PUT
+PUT http://localhost:5000/api/weapons/652835f0c017778e4cce8c8a
+Content-Type: application/json
+
+{
+  "name": "Panthom-s",
+  "description": "Primary weapon, good for long range combat, has a supressor, cost 2900 credits"
+}
+
+###Patch
+PATCH http://localhost:5000/api/weapons/652835d6c017778e4cce8c88
+Content-Type: application/json
+
+{
+  "description": "Primary weapon, good for long range combat, one shot one kill, cost 2900 credits"
+}
+
+###DELETE
+DELETE http://localhost:5000/api/weapons/6528404cdc802e3be6c1f0e6
