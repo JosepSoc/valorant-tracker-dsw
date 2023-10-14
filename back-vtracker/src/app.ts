@@ -16,4 +16,4 @@ app.use((_, res) => {
   res.status(404).send({ message: 'Resource not found' });
 });
 
-app.listen(5000, () => { console.log(`Server is running on http://localhost:5000 WITH uri ${process.env.API_URI}`) });
+app.listen(5000, () => { console.log(`Server is running on http://localhost:5000`) });
