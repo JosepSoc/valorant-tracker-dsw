@@ -22,7 +22,6 @@ export function sanitizeAgentInput(req: Request, res: Response, next: NextFuncti
 
 
 export async function findAll(req: Request, res: Response) {
-  console.log(process.env.API_URI);
   res.json({ data: await repository.findAll() });
 }
 

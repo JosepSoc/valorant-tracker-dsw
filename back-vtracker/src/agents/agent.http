@@ -14,7 +14,7 @@ Content-Type: application/json
   "habilities": ["q","e","f","x"]
 }
 
-###PUT       NO SE PORQUE NO CAMBIA EL NOMBRE PERO SI EL RESTO
+###PUT
 PUT http://localhost:5000/api/agents/6529661999ba470ad8139a7a
 Content-Type: application/json
 
