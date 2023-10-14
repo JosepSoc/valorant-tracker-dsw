@@ -1,8 +1,11 @@
-import {MongoClient, Db} from 'mongodb';
+import { MongoClient, Db } from 'mongodb';
+import dotenv from 'dotenv';
 
-const connectionStr = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/';
+dotenv.config();
+
+const connectionStr = process.env.API_URI || 'mongodb.//127.0.0.1:27017/';
 
 const cli = new MongoClient(connectionStr);
 await cli.connect();
 
-export let db: Db = cli.db('dsw');
+export let db: Db = cli.db('Valorant-Tracker');

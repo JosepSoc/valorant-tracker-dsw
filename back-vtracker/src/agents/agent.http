@@ -1,0 +1,47 @@
+###GET all users
+GET http://localhost:5000/api/agents/
+
+###GET one user
+GET http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+
+###POST
+POST http://localhost:5000/api/agents/
+Content-Type: application/json
+
+{
+  "name": "el gordo guma",
+  "description": "gumayusi@gmail.com",
+  "habilities": ["q","e","f","x"]
+}
+
+###PUT       NO SE PORQUE NO CAMBIA EL NOMBRE PERO SI EL RESTO
+PUT http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+Content-Type: application/json
+
+{
+  "name": "pykeCambio",
+  "description": "gumayusi@gmail.com",
+  "habilities": ["q","e","f","x"]
+}
+
+###PUT
+PUT http://localhost:5000/api/agents/652965cabe5445999b923786
+Content-Type: application/json
+
+{
+  "description": "Sovinha"
+}
+
+###Patch
+PATCH http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+Content-Type: application/json
+
+{
+  "name": "pykeCambio",
+  "description": "gumayusi@gmail.com",
+  "habilities": ["q","e","f","x"]
+}
+
+
+###DELETE
+DELETE http://localhost:5000/api/agents/6529661999ba470ad8139a7a
