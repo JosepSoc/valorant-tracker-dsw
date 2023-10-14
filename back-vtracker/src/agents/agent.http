@@ -1,7 +1,7 @@
-###GET all users
+###GET all agents
 GET http://localhost:5000/api/agents/
 
-###GET one user
+###GET one agent
 GET http://localhost:5000/api/agents/6529661999ba470ad8139a7a
 
 ###POST
