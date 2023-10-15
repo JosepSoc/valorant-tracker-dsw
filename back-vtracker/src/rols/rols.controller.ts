@@ -47,11 +47,6 @@ export async function update(req: Request, res: Response) {
   if (rl_Modified === undefined) {
     return res.status(404).send({ message: 'Rol not found' });
   }
-  console.log(req.body.sanitizedInputData);
-  console.log(req.params.id);
-
-
-  console.log(rl_Modified);
   return res.status(200).send({ message: 'Rol correctly modified', data: rl_Modified });
 }
 
