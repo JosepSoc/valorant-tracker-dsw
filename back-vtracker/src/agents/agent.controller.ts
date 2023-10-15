@@ -8,7 +8,7 @@ export function sanitizeAgentInput(req: Request, res: Response, next: NextFuncti
   req.body.sanitizedInputData = {
     name: req.body.name,
     description: req.body.description,
-    habilities: req.body.habilities,
+    abilities: req.body.abilities,
   }
 
   Object.keys(req.body.sanitizedInputData).forEach((key) => {
@@ -36,8 +36,8 @@ export async function findOne(req: Request, res: Response) {
 
 export async function add(req: Request, res: Response) {
 
-  const { name, description, habilities } = req.body.sanitizedInputData;
-  const ag = new Agent(name, description, habilities);
+  const { name, description, abilities } = req.body.sanitizedInputData;
+  const ag = new Agent(name, description, abilities);
   const ag_Created = await repository.add(ag);
   return res.status(201).send({ message: 'Agent created', data: ag_Created });
 }

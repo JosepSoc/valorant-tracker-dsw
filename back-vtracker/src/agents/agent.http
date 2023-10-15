@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "name": "el gordo guma",
   "description": "gumayusi@gmail.com",
-  "habilities": ["q","e","f","x"]
+  "abilities": ["q","e","f","x"]
 }
 
 ###PUT
@@ -21,7 +21,7 @@ Content-Type: application/json
 {
   "name": "pykeCambio",
   "description": "gumayusi@gmail.com",
-  "habilities": ["q","e","f","x"]
+  "abilities": ["q","e","f","x"]
 }
 
 ###PUT
@@ -39,7 +39,7 @@ Content-Type: application/json
 {
   "name": "pykeCambio",
   "description": "gumayusi@gmail.com",
-  "habilities": ["q","e","f","x"]
+  "abilities": ["q","e","f","x"]
 }
 
 
