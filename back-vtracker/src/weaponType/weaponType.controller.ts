@@ -8,7 +8,6 @@ export function sanitizeUserInput(req: Request, res:Response, next:NextFunction)
   req.body.sanitizedInputData = {
     cod_weapon_type: req.body.cod_weapon_type,
     description: req.body.description,
-    //weapon_name: req.body.weapon_name,
   }
 
   Object.keys(req.body.sanitizedInputData).forEach((key) => {

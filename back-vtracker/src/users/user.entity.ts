@@ -7,7 +7,7 @@ export class User{
     public email: string,
     public crosshair: string,
     public password: string,
-    // public agentes: string[],
+    public agents: string[],
     public _id ?: ObjectId
     )
     {}

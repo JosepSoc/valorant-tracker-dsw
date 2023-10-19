@@ -4,7 +4,7 @@ export class Weapon{
   constructor(
     public name: string,
     public description: string,
-    //public weapon-type: number
+    public weaponType_code: number,
     public _id?: ObjectId
     )
     {}

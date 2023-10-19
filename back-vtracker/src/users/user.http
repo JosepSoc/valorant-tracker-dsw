@@ -2,7 +2,7 @@
 GET http://localhost:5000/api/users/
 
 ###GET one user
-GET http://localhost:5000/api/users/65283ab17883b0be119b8f03
+GET http://localhost:5000/api/users/6528368bc017778e4cce8c8e
 
 ###POST
 POST http://localhost:5000/api/users/
@@ -13,11 +13,12 @@ Content-Type: application/json
   "name_lastname": "el gordo guma",
   "email": "gumayusi@gmail.com",
   "crosshair": "0;P;c;5;o;1;d;1;0b;0",
-  "password": "gangplank"
+  "password": "gangplank",
+  "agents": ["Omen", "Sage", "Brimstone"]
 }
 
 ###PUT
-PUT http://localhost:5000/api/users/65283ab17883b0be119b8f03
+PUT http://localhost:5000/api/users/6531acdeed02b3fff89f1817
 Content-Type: application/json
 
 {
@@ -25,7 +26,8 @@ Content-Type: application/json
   "name_lastname": "Santi Montecino",
   "email": "santimonte@gmail.com",
   "crosshair": "0;P;c;5;o;1;d;1;0b;0",
-  "password": "homerochino"
+  "password": "homerochino",
+  "agents": ["Jett", "Breach"]
 }
 
 ###Patch
@@ -39,4 +41,4 @@ Content-Type: application/json
 }
 
 ###DELETE
-DELETE http://localhost:5000/api/users/65283ab17883b0be119b8f03
+DELETE http://localhost:5000/api/users/6531acdeed02b3fff89f1817

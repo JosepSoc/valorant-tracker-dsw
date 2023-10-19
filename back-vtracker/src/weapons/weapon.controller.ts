@@ -8,7 +8,7 @@ export function sanitizeUserInput(req: Request, res:Response, next:NextFunction)
   req.body.sanitizedInputData = {
     name: req.body.name,
     description: req.body.description,
-    //tipo: req.body.tipo,
+    weaponType_code: req.body.weaponType_code,
   }
 
   Object.keys(req.body.sanitizedInputData).forEach((key) => {
@@ -35,8 +35,8 @@ export async function findOne(req: Request, res: Response){
 
 export async function add(req: Request, res: Response){
   
-  const {name, description}=req.body.sanitizedInputData;
-  const w = new Weapon(name, description);
+  const {name, description, weaponType_code}=req.body.sanitizedInputData;
+  const w = new Weapon(name, description, weaponType_code);
   const w_Created=await repository.add(w);
   return res.status(201).send({message:'Weapon created', data: w_Created});
 }
