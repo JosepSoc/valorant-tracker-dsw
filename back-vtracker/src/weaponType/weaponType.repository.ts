@@ -4,7 +4,7 @@ import { db } from "../shared/db/connection.js";
 import { ObjectId } from "mongodb";
 
 
-const weaponTypes = db.collection<WeaponType>('weapons');
+const weaponTypes = db.collection<WeaponType>('weaponType');
 
 export class WeaponTypeRepository implements Repository<WeaponType> {
 
