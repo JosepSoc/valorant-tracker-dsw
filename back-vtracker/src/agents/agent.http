@@ -1,0 +1,44 @@
+###GET all agents
+GET http://localhost:5000/api/agents/
+
+###GET one agent
+GET http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
+
+###POST
+POST http://localhost:5000/api/agents/
+Content-Type: application/json
+
+{
+  "name": "ChampEdit",
+  "description": "This is an entity to test edits and deletes",
+  "habilities": ["c ability","q ability","e ability","x ability"],
+  "role": "role name"
+}
+
+###PUT
+PUT http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
+Content-Type: application/json
+
+{
+  "description": "This is an entity to test edits and deletes, eddited"
+}
+
+###PUT
+PUT http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
+Content-Type: application/json
+
+{
+  "description": "This is an entity to test edits and deletes"
+}
+
+###Patch
+PATCH http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
+Content-Type: application/json
+
+{
+  "description": "This is an entity to test edits and deletes patched"
+}
+
+
+###DELETE
+DELETE http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
