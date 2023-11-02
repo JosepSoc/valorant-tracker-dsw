@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Abilities {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  actionKey   String
+  description String
+  name        String
+  agent       Agents @relation(fields: [agentId], references: [id])
+  agentId     String @db.ObjectId
+}
+
+model Agents {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  abilities   Abilities[]
+  name        String
+  role        Rols @relation(fields: [roleId], references: [id])
+  roleId      String @db.ObjectId
+  users       Users[] @relation(fields: [usersIds], references: [id])
+  usersIds    String[] @db.ObjectId
+}
+
+model Rols {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  name        String
+  agents      Agents[]
+
+}
+
+model Users {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  agents        Agents[] @relation(fields: [agentsIds], references: [id])
+  agentsIds     String[] @db.ObjectId
+  crosshair     String
+  email         String
+  name_lastname String
+  password      String
+  puuid         String
+}
+
+model Weapons {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  description     String
+  name            String
+  weaponTypes     WeaponType[] @relation(fields: [weaponTypesIds], references: [id])
+  weaponTypesIds  String[] @db.ObjectId
+
+}
+
+model WeaponType {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  cod_weapon_type Int
+  description     String
+  weapons         Weapons[] @relation(fields: [weaponIds], references: [id])
+  weaponIds       String[]  @db.ObjectId
+}
