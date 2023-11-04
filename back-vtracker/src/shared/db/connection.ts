@@ -1,11 +1,3 @@
-import { MongoClient, Db } from 'mongodb';
-import dotenv from 'dotenv';
+import { PrismaClient } from '@prisma/client';
 
-dotenv.config();
-
-const connectionStr = process.env.API_URI || '';
-
-const cli = new MongoClient(connectionStr);
-await cli.connect();
-
-export let db: Db = cli.db('Valorant-Tracker');
+export let db = new PrismaClient();
