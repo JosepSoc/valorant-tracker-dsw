@@ -11,6 +11,7 @@ Content-Type: application/json
 {
   "name": "Classic",
   "description": "Secondary weapon, good for close combat, cost 0 credits"
+  "weaponType_code": 5
 }
 
 ###PUT
@@ -19,7 +20,8 @@ Content-Type: application/json
 
 {
   "name": "Panthom-s",
-  "description": "Primary weapon, good for long range combat, has a supressor, cost 2900 credits"
+  "description": "Primary weapon, good for long range combat, has a supressor, cost 2900 credits",
+  "weaponType_code": 3
 }
 
 ###Patch

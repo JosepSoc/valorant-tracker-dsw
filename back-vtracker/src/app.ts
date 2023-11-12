@@ -5,6 +5,7 @@ import { agentRouter } from './agents/agent.routes.js';
 import { abilityRouter } from './abilities/abilities.routes.js';
 import { rolRouter } from './rols/rols.routes.js';
 
+import { weaponTypeRouter } from './weaponType/weaponType.routes.js';
 const app = express();
 app.use(express.json());
 
@@ -13,7 +14,7 @@ app.use('/api/abilities', abilityRouter);
 app.use('/api/users', userRouter);
 app.use('/api/agents', agentRouter)
 app.use('/api/weapons', weaponRouter);
-
+app.use('/api/weaponTypes', weaponTypeRouter);
 
 app.use((_, res) => {
   res.status(404).send({ message: 'Resource not found' });

@@ -2,46 +2,43 @@
 GET http://localhost:5000/api/agents/
 
 ###GET one agent
-GET http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+GET http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
 
 ###POST
 POST http://localhost:5000/api/agents/
 Content-Type: application/json
 
 {
-  "name": "el gordo guma",
-  "description": "gumayusi@gmail.com",
-  "abilities": ["q","e","f","x"]
+  "name": "ChampEdit",
+  "description": "This is an entity to test edits and deletes",
+  "habilities": ["c ability","q ability","e ability","x ability"],
+  "role": "role name"
 }
 
 ###PUT
-PUT http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+PUT http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
 Content-Type: application/json
 
 {
-  "name": "pykeCambio",
-  "description": "gumayusi@gmail.com",
-  "abilities": ["q","e","f","x"]
+  "description": "This is an entity to test edits and deletes, eddited"
 }
 
 ###PUT
-PUT http://localhost:5000/api/agents/652965cabe5445999b923786
+PUT http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
 Content-Type: application/json
 
 {
-  "description": "Sovinha"
+  "description": "This is an entity to test edits and deletes"
 }
 
 ###Patch
-PATCH http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+PATCH http://localhost:5000/api/agents/652c53095c150c20ea1cf12d
 Content-Type: application/json
 
 {
-  "name": "pykeCambio",
-  "description": "gumayusi@gmail.com",
-  "abilities": ["q","e","f","x"]
+  "description": "This is an entity to test edits and deletes patched"
 }
 
 
 ###DELETE
-DELETE http://localhost:5000/api/agents/6529661999ba470ad8139a7a
+DELETE http://localhost:5000/api/agents/652c53095c150c20ea1cf12d

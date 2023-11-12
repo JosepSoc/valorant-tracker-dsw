@@ -11,7 +11,7 @@ export function sanitizeUserInput(req: Request, res:Response, next:NextFunction)
     email: req.body.email,
     crosshair: req.body.crosshair,
     password: req.body.password,
-    //agents: req.body.agents,
+    agents: req.body.agents,
   }
 
   Object.keys(req.body.sanitizedInputData).forEach((key) => {
@@ -39,8 +39,8 @@ export async function findOne(req: Request, res: Response){
 
 export async function add(req: Request, res: Response){
   
-  const {puuid, name_lastname, email, crosshair, password}=req.body.sanitizedInputData;
-  const u = new User(puuid, name_lastname, email, crosshair, password);
+  const {puuid, name_lastname, email, crosshair, password, agents}=req.body.sanitizedInputData;
+  const u = new User(puuid, name_lastname, email, crosshair, password, agents);
   const u_Created=await repository.add(u);
   return res.status(201).send({message:'User created', data: u_Created});
 }

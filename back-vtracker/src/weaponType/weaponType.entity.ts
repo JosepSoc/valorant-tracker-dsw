@@ -1,10 +1,9 @@
 import { ObjectId } from "mongodb";
 
-export class Weapon{
+export class WeaponType{
   constructor(
-    public name: string,
+    public cod_weapon_type: number,
     public description: string,
-    public weaponType_code: number,
     public _id?: ObjectId
     )
     {}

@@ -1,0 +1,34 @@
+###GET all weapons
+GET http://localhost:5000/api/weaponTypes/
+
+###GET one weapon
+GET http://localhost:5000/api/weaponTypes/65314db18313913f6a237a83
+
+###POST
+POST http://localhost:5000/api/weaponTypes/
+Content-Type: application/json
+
+{
+  "cod_weapon_type": "1",
+  "description": "main-arm"
+}
+
+###PUT
+PUT http://localhost:5000/api/weaponTypes/65314e424a388a1a9360a298
+Content-Type: application/json
+
+{
+  "cod_weapon_type": "4",
+  "description": "SMGS"
+}
+
+###Patch
+PATCH http://localhost:5000/api/weaponTypes/65314e424a388a1a9360a298
+Content-Type: application/json
+
+{
+  "description": "SMG"
+}
+
+###DELETE
+DELETE http://localhost:5000/api/weaponTypes/65314e424a388a1a9360a298
