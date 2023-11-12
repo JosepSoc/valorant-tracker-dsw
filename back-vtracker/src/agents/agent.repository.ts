@@ -32,7 +32,4 @@ export class AgentRepository implements Repository<Agent> {
     return (await agents.findOneAndDelete({ _id })) || undefined;
   }
 
-
-
-
 }
