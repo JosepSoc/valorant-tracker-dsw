@@ -1,0 +1,21 @@
+.container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .losttrack {
+    background-color: brown;
+    height: 100%;
+    width: 60%;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    }
+    button{
+    background-color: transparent;
+    border: none;
+    }
+}
