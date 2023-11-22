@@ -1,0 +1,36 @@
+###GET all rols
+GET http://localhost:5000/api/rols/
+
+###GET one rols
+GET http://localhost:5000/api/rols/652c47a6434b2b79fdf60b42
+
+
+###POST
+POST http://localhost:5000/api/rols/
+Content-Type: application/json
+
+{
+    "name": "Sentinel",
+    "description": "are defensive experts who can lock down areas and watch flanks, both on attacker and defender rounds."
+}
+
+###PUT
+PUT http://localhost:5000/api/rols/652c47a6434b2b79fdf60b42
+Content-Type: application/json
+
+{
+    "name": "Shock volt",
+    "description": "EQUIP a bow with a shock bolt. FIRE to send the explosive bolt forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALT FIRE to add up to two bounces to this arrow."
+}
+
+###PUT
+PUT http://localhost:5000/api/rols/652c47a6434b2b79fdf60b42
+Content-Type: application/json
+
+{
+    "name": "Shock Bolt",
+    "description": "EQUIP a bow w"
+}
+
+###DELETE
+DELETE http://localhost:5000/api/rols/652c47a6434b2b79fdf60b42

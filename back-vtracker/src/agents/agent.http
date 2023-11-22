@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "name": "ChampEdit",
   "description": "This is an entity to test edits and deletes",
-  "habilities": ["c ability","q ability","e ability","x ability"],
+  "abilities": ["c ability","q ability","e ability","x ability"],
   "role": "role name"
 }
 

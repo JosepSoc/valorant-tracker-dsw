@@ -1,11 +1,10 @@
 import { ObjectId } from 'mongodb';
 
-export class Agent {
+export class Ability {
   constructor(
     public name: string,
     public description: string,
-    public abilities: string[],
-    public role: string,
+    public actionKey: string,
     public _id?: ObjectId
   ) { }
 }
