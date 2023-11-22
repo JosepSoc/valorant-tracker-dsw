@@ -4,19 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AbmListComponent } from './abm-list/abm-list.component';
-import { AbmFormComponent } from './abm-form/abm-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PercentageBarComponent } from './components/percentage-bar/percentage-bar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AbmListComponent,
-    AbmFormComponent
+    PercentageBarComponent,
+    AbmFormComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
