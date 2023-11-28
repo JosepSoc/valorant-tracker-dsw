@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PercentageBarComponent } from './components/percentage-bar/percentage-bar.component';
 import { AbmFormComponent } from './components/abm-form/abm-form.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
     AbmListComponent,
     PercentageBarComponent,
     AbmFormComponent,
+    LoginFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
