@@ -1,4 +1,4 @@
-<nav class="container" *ngIf="!searchMode">
+<nav class="container" *ngIf="searchMode">
     <a href="/" class="losttrack">
         <img src="./assets/LostTrack.svg" alt="Losttack" />
     </a>
@@ -7,11 +7,11 @@
 </nav>
 
 
-<div *ngIf="searchMode" class="search-box">
+<div *ngIf="!searchMode" class="search-box">
     <form class="search-form">
         <input placeholder="Buscar" >
+        <button mat-icon-button (click)="toggleSearchMode()">
+            close
+         </button>
     </form>
-    <button mat-icon-button (click)="toggleSearchMode()">
-       close
-    </button>
 </div>

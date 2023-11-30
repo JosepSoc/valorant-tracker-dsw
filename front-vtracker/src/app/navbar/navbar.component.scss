@@ -19,3 +19,23 @@
     border: none;
     }
 }
+.search-box {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    form{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    input {
+        height: 30px;
+        width: 90%;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 10px;
+    }
+    }
+}
