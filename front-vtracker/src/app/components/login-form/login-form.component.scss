@@ -1,0 +1,65 @@
+@import 'src/styles.scss';
+
+.container {
+  i {
+    background-color: white;
+  }
+
+  .row {
+    .col {
+      // style for the column
+      background-color: $spc-head-blue;
+      border-radius: 15px;
+
+      form {
+        h2 {
+          color: $spc-red;
+          text-align: center;
+          font-size: 30px;
+          text-transform: uppercase;
+          font-style: Montserrat;
+          font-weight: bold;
+          padding-top: 5%;
+
+        }
+
+        .form-group {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .form-control {
+            flex-grow: 1;
+          }
+        }
+
+        i {
+          font-size: 20px;
+          margin-left: -25px;
+          padding-right: 5px;
+          color: $icon-color;
+        }
+
+        .btn {
+          display: block;
+          margin: auto;
+          background-color: $spc-red;
+          border-radius: 5px;
+
+          // style for the button
+          &.btn-primary {
+            // style for the primary button
+          }
+
+          &.mb-2 {
+            // style for the margin bottom
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-style {
+  padding: 5px 0;
+}
