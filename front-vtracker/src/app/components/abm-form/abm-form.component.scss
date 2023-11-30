@@ -37,10 +37,7 @@
             margin-left: auto;
             color: white;
             text-decoration: none;
-            &:focus {
-                outline: none;
-                box-shadow: none;
-              }
+            
             
             
 
@@ -51,6 +48,7 @@
             background-color: $spc-red;
             border-radius: 5px;
             margin-top: -8px;
+            border-color: $spc-red;
           }
 
           &.mb-2 {
