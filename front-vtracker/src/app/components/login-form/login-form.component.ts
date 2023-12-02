@@ -8,13 +8,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class LoginFormComponent {
 
   @ViewChild('logHeader') logHeader!: ElementRef;
-  @ViewChild('usernameBox') usernameBox!: ElementRef;
-  @ViewChild('passwordBox') passwordBox!: ElementRef;
-  @ViewChild('confirmpassBox') confirmpassBox!: ElementRef;
-  @ViewChild('emailBox') emailBox!: ElementRef;
-  @ViewChild('termsCheckBox') termsCheckBox!: ElementRef;
-  @ViewChild('registerBtn') registerBtn!: ElementRef;
-  @ViewChild('gotoLoginBtn') gotoLoginBtn!: ElementRef;
   
   isRegister: boolean = false;
 
@@ -27,10 +20,12 @@ export class LoginFormComponent {
     }
   }
   turnLogin(){
-
+    this.logHeader.nativeElement.innerHTML = "Log in";
+    this.isRegister = false;
   }
 
   turnRegister(){
-    
+    this.logHeader.nativeElement.innerHTML = "Sign up";
+    this.isRegister = true;
   }
 }

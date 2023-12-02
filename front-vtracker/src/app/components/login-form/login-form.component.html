@@ -31,6 +31,12 @@
           </label>
         </div>
 
+        <p class="password-Help" *ngIf="!isRegister">forgot password?</p>
+
+        <button #loginBtn type="submit" class="login-btn" *ngIf="!isRegister">
+          <img class="go-btn" src="assets\loginButton.png" alt="">
+        </button>
+        
         <button #registerBtn type="submit" class="btn btn-primary mb-2" *ngIf="isRegister">
           Start tracking!
         </button>

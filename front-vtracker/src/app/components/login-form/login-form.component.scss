@@ -101,6 +101,32 @@
             color: $button-green;
           }
         }
+        .password-Help{
+          font-family: $text-font;
+          text-transform: uppercase;
+          color: $spc-red;
+          font-style: italic;
+          font-weight: 500;
+          font-size: 80%;
+          margin-top: -1%;
+          margin-left: 53%;
+        }
+        .login-btn{ 
+          margin-left: 31%;
+          background-color: $spc-head-blue;
+          border: none;
+          position: relative;
+          overflow: hidden;
+          width: 38%;
+          height: 80%;
+          
+          padding-block: 10%;
+
+          .go-btn{
+            width: 100%;
+            height: auto;
+          }
+        }
       }
       
     }
