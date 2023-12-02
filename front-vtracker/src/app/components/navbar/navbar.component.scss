@@ -1,13 +1,15 @@
+@import "src/styles.scss";
+
 .container-nav {
-  height: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: $spc-head-blue;
   .losttrack-logo {
-    background-color: transparent;
-    height: 100%;
-    width: 50%;
-
+    height: 70%;
     margin-left: 15px;
+    background-color: transparent;
     img {
       height: 100%;
       width: 100%;
@@ -16,29 +18,34 @@
   .buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 27%;
     margin-right: 15px;
     button {
-      background-color: transparent;
       border: none;
-      padding: 14px;
+      padding: 10px;
+      font-size: 20px;
+      background-color: transparent;
+      color: $icon-color;
+    }
+    button:hover {
+      color: $spc-red;
     }
   }
 }
 .search-box {
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
+  background-color: $spc-head-blue;
 
-  form {
+  .search-form {
     display: flex;
     align-items: center;
     width: 95%;
     .custom-search {
-      position: relative;
       .custom-search-input {
         padding-right: 100px !important;
         box-sizing: border-box;
@@ -47,24 +54,18 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
+        color: $icon-color;
       }
       .custom-search-botton {
+        display: flex;
         position: absolute;
-        color: black;
-        height: 35px;
-        width: 35px;
+        color: $icon-color;
+        height: 100%;
         right: 10px;
-        top: 2px;
-        bottom: 4px;
-        line-height: 1 !important;
-        z-index: 4;
+        font-size: 20px;
         background-color: transparent;
         border: none;
         border-radius: 100%;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        -o-border-radius: 100%;
       }
     }
   }
