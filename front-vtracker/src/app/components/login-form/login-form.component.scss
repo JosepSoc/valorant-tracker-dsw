@@ -1,15 +1,16 @@
-@import 'src/styles.scss'; 
+@import 'src/styles.scss';
 
 .container {
   i {
     background-color: white;
   }
+
   .row {
     .col {
       // style for the column
       background-color: $spc-head-blue;
       border-radius: 15px;
-      
+
       form {
         h2 {
           color: $spc-red;
@@ -32,25 +33,22 @@
           }
         }
 
+        i {
+          font-size: 20px;
+          margin-left: -25px;
+          padding-right: 5px;
+          color: $icon-color;
+        }
+
         .btn {
-            display: flex;
-            margin-left: auto;
-            color: white;
-            text-decoration: none;
-            &:focus {
-                outline: none;
-                box-shadow: none;
-              }
-            
-            
+          display: block;
+          margin: auto;
+          background-color: $spc-red;
+          border-radius: 5px;
 
           // style for the button
           &.btn-primary {
-            display: block;
-            margin: auto;
-            background-color: $spc-red;
-            border-radius: 5px;
-            margin-top: -8px;
+            // style for the primary button
           }
 
           &.mb-2 {
@@ -65,4 +63,3 @@
 .form-style {
   padding: 5px 0;
 }
-

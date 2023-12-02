@@ -1,1 +1,38 @@
-<p>abm-form works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <h2>{{ entityText }}</h2>
+
+
+
+        <div class="form-group form-style">
+          <input type="text" #puuidBox class="form-control" placeholder="Puuid" />
+        </div>
+
+        <div class="form-group form-style">
+          <input type="text" #usernameBox class="form-control" placeholder="Username" />
+        </div>
+
+        <div class="form-group form-style">
+          <input type="text" #passwordBox class="form-control" placeholder="Password" />
+        </div>
+
+        <div class="form-group form-style">
+          <input type="email" #emailBox class="form-control" placeholder="Email" />
+        </div>
+
+        <div class="form-group form-style">
+          <input type="text" #crosshairBox class="form-control" placeholder="Crosshair" />
+        </div>
+
+        <button (click)="clearFields()" type="reset" class="btn">Clear fields</button>
+
+        <button type="submit" class="btn btn-primary mb-2">
+          Confirm
+        </button>
+        
+      </form>
+    </div>
+  </div>
+</div>
