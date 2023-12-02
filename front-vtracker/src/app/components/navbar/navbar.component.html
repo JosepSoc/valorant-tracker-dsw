@@ -1,0 +1,32 @@
+<nav class="container-nav" *ngIf="!searchMode">
+  <a href="/" class="losttrack-logo">
+    <img src="./assets/LostTrack.svg" alt="Losttack" />
+  </a>
+  <div class="buttons">
+    <button class="search-btn" (click)="toggleSearchMode()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button class="profile-btn">
+      <i class="fa-solid fa-user-gear"></i>
+    </button>
+  </div>
+</nav>
+
+<div *ngIf="searchMode" class="search-box">
+  <form class="search-form">
+    <div class="input-group custom-search">
+      <input
+        type="text"
+        class="form-control custom-search-input"
+        placeholder="Buscar"
+      />
+      <button
+        class="btn btn-primary custom-search-botton"
+        type="submit"
+        (click)="toggleSearchMode()"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </form>
+</div>

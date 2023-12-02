@@ -1,4 +1,4 @@
-@import 'src/styles.scss'; 
+@import "src/styles.scss";
 
 .container {
   i {
@@ -9,7 +9,7 @@
       // style for the column
       background-color: $spc-head-blue;
       border-radius: 15px;
-      
+
       form {
         h2 {
           color: $spc-red;
@@ -19,7 +19,6 @@
           font-style: Montserrat;
           font-weight: bold;
           padding-top: 5%;
-
         }
 
         .form-group {
@@ -33,16 +32,14 @@
         }
 
         .btn {
-            display: flex;
-            margin-left: auto;
-            color: white;
-            text-decoration: none;
-            &:focus {
-                outline: none;
-                box-shadow: none;
-              }
-            
-            
+          display: flex;
+          margin-left: auto;
+          color: white;
+          text-decoration: none;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
 
           // style for the button
           &.btn-primary {
@@ -65,4 +62,3 @@
 .form-style {
   padding: 5px 0;
 }
-
