@@ -1,0 +1,30 @@
+<div class="container-agent">
+  <div class="agent-title">
+    <p>AGENTS</p>
+    <p>{{ wins }} W - {{ losses }} L</p>
+    <p>{{ porcentaje }}%</p>
+  </div>
+  <div *ngFor="let agent of agents; index as i" class="agent-card">
+    <div class="agent-posimg">
+      <p>{{ i + 1 }}°</p>
+      <img src="{{ agent.image }}" alt="agente" class="agent-img" />
+    </div>
+    <div class="agent-wlp">
+      <p>{{ agent.wins }} W - {{ agent.losses }} L</p>
+
+      <div
+        class="progress progressbar"
+        role="progressbar"
+        aria-label="Success example"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar bg-success" style="width: 50%">
+          {{ agent.porcentaje }}%
+        </div>
+        <div class="progress-bar-loss">{{ 100 - agent.porcentaje }}%</div>
+      </div>
+    </div>
+  </div>
+</div>

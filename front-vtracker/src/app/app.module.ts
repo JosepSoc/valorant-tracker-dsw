@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AbmListComponent } from './components/abm-list/abm-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PercentageBarComponent } from './components/percentage-bar/percentage-bar.component';
 import { AbmFormComponent } from './components/abm-form/abm-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { AgentsListComponent } from './components/agents-list/agents-list.component';
 
 
 
@@ -16,9 +16,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     AppComponent,
     NavbarComponent,
     AbmListComponent,
-    PercentageBarComponent,
     AbmFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    AgentsListComponent
   ],
   imports: [
     BrowserModule,
