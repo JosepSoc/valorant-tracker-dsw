@@ -1,4 +1,4 @@
-@import 'src/styles.scss'; 
+@import "src/styles.scss";
 
 .container {
   i {
@@ -9,7 +9,7 @@
       // style for the column
       background-color: $spc-head-blue;
       border-radius: 15px;
-      
+
       form {
         h2 {
           color: $spc-red;
@@ -19,7 +19,6 @@
           font-style: Montserrat;
           font-weight: bold;
           padding-top: 5%;
-
         }
 
         .form-group {
@@ -37,7 +36,6 @@
             margin-left: auto;
             color: white;
             text-decoration: none;
-            
             
             
 
@@ -63,4 +61,3 @@
 .form-style {
   padding: 5px 0;
 }
-
