@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbmFormComponent } from './components/abm-form/abm-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AgentsListComponent } from './components/agents-list/agents-list.component';
+import { MatchHistoryComponent } from './components/match-history/match-history.component';
+
 
 
 
@@ -18,7 +20,9 @@ import { AgentsListComponent } from './components/agents-list/agents-list.compon
     AbmListComponent,
     AbmFormComponent,
     LoginFormComponent,
-    AgentsListComponent
+    AgentsListComponent,
+    MatchHistoryComponent
+
   ],
   imports: [
     BrowserModule,
