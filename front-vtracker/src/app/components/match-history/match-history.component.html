@@ -1,29 +1,24 @@
 <div class="container-mhistory">
   <p>MATCH HISTORY</p>
-  <div *ngFor="let match of matchs; index as i" class="match-card">
+  <div *ngFor="let m of match; index as i" class="match-card">
     <div class="container-img">
-      <img src="{{ match.map }}" alt="mapa" class="match-img" />
-      <img
-        src="{{ match.agent }}"
-        alt="agente"
-        class="match-img"
-        id="agent-img"
-      />
+      <img src="{{ m.mapa }}" alt="mapa" class="match-img" />
+      <img src="{{ m.agent }}" alt="agente" class="match-img" id="agent-img" />
     </div>
-    <div class="result">{{ match.wins }} : {{ match.losses }}</div>
+    <div class="result">{{ m.wins }} : {{ m.losses }}</div>
     <div class="rank">
       <div>PL</div>
       <div>
-        {{ match.mmr }}
+        {{ m.mmr }}
       </div>
     </div>
     <div class="kda-result">
       <div>K / D / A</div>
-      <div>{{ match.kills }}/{{ match.deaths }}/{{ match.assists }}</div>
+      <div>{{ m.kills }}/{{ m.deaths }}/{{ m.assists }}</div>
     </div>
     <div class="mode">
       <div>Queue</div>
-      <div>{{ match.mode }}</div>
+      <div>{{ m.mode }}</div>
     </div>
   </div>
 </div>

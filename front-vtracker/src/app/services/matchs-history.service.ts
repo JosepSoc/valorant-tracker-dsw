@@ -10,14 +10,14 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class MatchsHistoryService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   data: any;
 
   getMatchs(match: Matchs): any {
     let matchs: Matchs[] = [];
-
     let agent: Agent = {};
     let mmr: Mmr = {};
+
     let result = this.http
       .get(
         `https://api.henrikdev.xyz/valorant/v3/matches/${match.region}/${match.name}/${match.tag}?mode=competitive`
@@ -26,6 +26,11 @@ export class MatchsHistoryService {
         if (response.status === 200) {
           matchs = response.data.map((data: any, index: number) => {
             agent = this.getAgentName(match.name, match.tag, data);
+            console.log("Sigue esto");
+            console.log(agent);
+            console.log(match);
+
+
             return {
               name: match.name,
               tag: match.tag,
@@ -42,26 +47,18 @@ export class MatchsHistoryService {
               mmr: 0,
             };
           });
-          console.log(matchs);
           matchs = this.getMatchDetails(matchs);
-          console.log(matchs);
+          console.log("fin getmatchsaaaaaaaaa");
         } else {
           console.log('Error');
         }
       });
-    console.log(matchs);
-
-    // this.linkAgentMatchs(matchs, agent);
-    // this.getMatchDetails(matchs);
-    console.log(matchs);
+    console.log("fin getmatchs service");
+    console.log(result);
 
     return matchs;
   }
-  linkAgentMatchs(matchs: Matchs[], agent: Agent) {
-    console.log(agent);
 
-    matchs.forEach((match: Matchs) => {});
-  }
 
   getMatchDetails(matchs: Matchs[]): any {
     let result = this.http
@@ -82,6 +79,8 @@ export class MatchsHistoryService {
           console.log('Error');
         }
       });
+    console.log("fin getmatchdetails");
+
     console.log(matchs);
 
     return matchs;
@@ -116,6 +115,8 @@ export class MatchsHistoryService {
       } else {
       }
     }
+    console.log("fin getagentname");
+
     return agent;
   }
 }
