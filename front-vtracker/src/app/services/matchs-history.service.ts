@@ -4,86 +4,66 @@ import { Observable, forkJoin } from 'rxjs';
 import { Matchs } from '../models/matchs.model';
 import { Mmr } from '../models/mmr.model';
 import { Agent } from '../models/agent.model';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MatchsHistoryService {
   constructor(private http: HttpClient) { }
-  data: any;
 
-  getMatchs(match: Matchs): any {
-    let matchs: Matchs[] = [];
-    let agent: Agent = {};
-    let mmr: Mmr = {};
-
-    let result = this.http
-      .get(
-        `https://api.henrikdev.xyz/valorant/v3/matches/${match.region}/${match.name}/${match.tag}?mode=competitive`
-      )
-      .subscribe((response: any) => {
-        if (response.status === 200) {
-          matchs = response.data.map((data: any, index: number) => {
-            agent = this.getAgentName(match.name, match.tag, data);
-            console.log("Sigue esto");
-            console.log(agent);
-            console.log(match);
-
-
-            return {
-              name: match.name,
-              tag: match.tag,
-              region: match.region,
-              agent: agent.agent,
-              mapa: data.metadata.map,
-              match_id: data.metadata.matchid,
-              wins: agent.wins,
-              losses: agent.losses,
-              kills: agent.kills,
-              deaths: agent.deaths,
-              assists: agent.assists,
-              mode: data.metadata.mode,
-              mmr: 0,
-            };
-          });
-          matchs = this.getMatchDetails(matchs);
-          console.log("fin getmatchsaaaaaaaaa");
-        } else {
-          console.log('Error');
-        }
-      });
-    console.log("fin getmatchs service");
-    console.log(result);
-
-    return matchs;
+  getMatchs(match: Matchs): Observable<Matchs[]> {
+    return this.http
+      .get(`https://api.henrikdev.xyz/valorant/v3/matches/${match.region}/${match.name}/${match.tag}?mode=competitive`)
+      .pipe(
+        switchMap((response: any) => {
+          if (response.status === 200) {
+            const matchesData = response.data.map((data: any) => {
+              const agent = this.getAgentName(match.name, match.tag, data);
+              return {
+                name: match.name,
+                tag: match.tag,
+                region: match.region,
+                agent: agent.agent,
+                mapa: data.metadata.map,
+                match_id: data.metadata.matchid,
+                wins: agent.wins,
+                losses: agent.losses,
+                kills: agent.kills,
+                deaths: agent.deaths,
+                assists: agent.assists,
+                mode: data.metadata.mode,
+                mmr: 0,
+              };
+            });
+            return this.getMatchDetails(matchesData);
+          } else {
+            throw new Error('Error fetching matches');
+          }
+        })
+      );
   }
 
-
-  getMatchDetails(matchs: Matchs[]): any {
-    let result = this.http
-      .get(
-        `https://api.henrikdev.xyz/valorant/v1/mmr-history/${matchs[0].region}/${matchs[0].name}/${matchs[0].tag}`
-      )
-      .subscribe((response: any) => {
-        if (response.status === 200) {
-          response.data.forEach((data: any) => {
-            for (let i = 0; i < matchs.length; i++) {
-              if (data.match_id === matchs[i].match_id) {
-                matchs[i].mmr = data.mmr_change_to_last_game;
-                matchs[i].rank_img = data.images.large;
-              }
+  getMatchDetails(matches: Matchs[]): Observable<Matchs[]> {
+    const mmrRequests = matches.map((match: Matchs) =>
+      this.http
+        .get(`https://api.henrikdev.xyz/valorant/v1/mmr-history/${match.region}/${match.name}/${match.tag}`)
+        .pipe(
+          map((response: any) => {
+            if (response.status === 200) {
+              response.data.forEach((data: any) => {
+                if (data.match_id === match.match_id) {
+                  match.mmr = data.mmr_change_to_last_game;
+                  match.rank_img = data.images.large;
+                }
+              });
+            } else {
+              throw new Error('Error fetching mmr');
             }
-          });
-        } else {
-          console.log('Error');
-        }
-      });
-    console.log("fin getmatchdetails");
-
-    console.log(matchs);
-
-    return matchs;
+          })
+        )
+    );
+    return forkJoin(mmrRequests).pipe(map(() => matches));
   }
 
   getAgentName(name: string, tag: string, matchs: any): any {
@@ -115,8 +95,6 @@ export class MatchsHistoryService {
       } else {
       }
     }
-    console.log("fin getagentname");
-
     return agent;
   }
 }

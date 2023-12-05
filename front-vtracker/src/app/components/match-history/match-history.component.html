@@ -1,8 +1,16 @@
 <div class="container-mhistory">
   <p>MATCH HISTORY</p>
-  <div *ngFor="let m of match; index as i" class="match-card">
-    <div class="container-img">
-      <img src="{{ m.mapa }}" alt="mapa" class="match-img" />
+  <div *ngFor="let m of matchs; index as i" class="match-card">
+    <div class="container-img" [style.backgroundImage]="'url(' + m.map + ')'">
+      <!-- <div
+        class="match-img"
+        [style.backgroundImage]="'url(' + m.map + ')'"
+      ></div> -->
+      <!-- <img
+        src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/listviewicon.png"
+        alt="mapa"
+        class="match-img"
+      /> -->
       <img src="{{ m.agent }}" alt="agente" class="match-img" id="agent-img" />
     </div>
     <div class="result">{{ m.wins }} : {{ m.losses }}</div>
