@@ -1,0 +1,38 @@
+@import "src/styles.scss";
+
+.main-container {
+  //esto hay que traerlo de .get/v2/match/{matchId}
+    background-image: url("/assets/images/player-card-eg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vw;
+    
+    
+
+  .Agent-img {
+    background-color: $spc-darker-blue;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 1px solid $spc-red;
+    margin: 0 auto;
+
+    img{
+      width: 70%;
+      height: 70%;
+      margin-left: 3vw;
+      margin-top: 2vw;
+      
+    }
+  }
+
+  .crosshair-container {
+    background-image: url("/assets/images/cross-hair-bg.png");
+    background-repeat: no-repeat;
+  }
+
+  .username-display {
+    // Styles for the username display
+  }
+}
