@@ -1,7 +1,7 @@
 <div class="container-mhistory">
   <p>MATCH HISTORY</p>
   <div *ngFor="let m of matchs; index as i" class="match-card">
-    <div class="container-img" [style.backgroundImage]="'url(' + m.map + ')'">
+    <div class="container-img" [style.backgroundImage]="'url(' + m.mapa + ')'">
       <img src="{{ m.agent }}" alt="agente" id="agent-img" />
     </div>
     <div class="result">{{ m.wins }} : {{ m.losses }}</div>
