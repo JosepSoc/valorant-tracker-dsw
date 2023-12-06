@@ -2,16 +2,7 @@
   <p>MATCH HISTORY</p>
   <div *ngFor="let m of matchs; index as i" class="match-card">
     <div class="container-img" [style.backgroundImage]="'url(' + m.map + ')'">
-      <!-- <div
-        class="match-img"
-        [style.backgroundImage]="'url(' + m.map + ')'"
-      ></div> -->
-      <!-- <img
-        src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/listviewicon.png"
-        alt="mapa"
-        class="match-img"
-      /> -->
-      <img src="{{ m.agent }}" alt="agente" class="match-img" id="agent-img" />
+      <img src="{{ m.agent }}" alt="agente" id="agent-img" />
     </div>
     <div class="result">{{ m.wins }} : {{ m.losses }}</div>
     <div class="rank">
@@ -22,7 +13,7 @@
     </div>
     <div class="kda-result">
       <div>K / D / A</div>
-      <div>{{ m.kills }}/{{ m.deaths }}/{{ m.assists }}</div>
+      <div>{{ m.kills }} / {{ m.deaths }} / {{ m.assists }}</div>
     </div>
     <div class="mode">
       <div>Queue</div>

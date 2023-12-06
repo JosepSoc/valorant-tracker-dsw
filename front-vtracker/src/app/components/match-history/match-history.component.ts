@@ -8,13 +8,12 @@ import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
   styleUrls: ['./match-history.component.scss'],
 })
 export class MatchHistoryComponent implements OnInit {
-  constructor(private api: MatchsHistoryService) { }
+  constructor(private api: MatchsHistoryService) {}
   // matchs: Matchs[] = [];
-
 
   ngOnInit(): void {
     const match: Matchs = { name: 'primmieyk', tag: 'XGOD', region: 'ap' };
-
+    //esto anda
     // this.api.getMatchs(match).subscribe(
     //   (data: Matchs[]) => {
     //     this.matchs = data;
