@@ -1,5 +1,28 @@
 <div class="main-container">
-  <div class="Agent-img">
-    <img src="https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png">
+  <div class="profile-main">
+    <!--la imagen de abajo sacarla de la request matchid-->
+    <img
+      src="https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png"
+    />
+    <!--la imagen de abajo sacarla de la request mmr-history-->
+    <img
+      src="https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/14/largeicon.png"
+      class="rank-img"
+    />
+    <!--la imagen de abajo generarla con la request a henrik de crosshair en base al codigo del user-->
+
+    <div class="crosshair" *ngIf="hasCrosshair">
+      <img src="assets/images/cross-hair-bg2.png" class="crosshair-bg-img" />
+
+      <img
+        src="https://api.henrikdev.xyz/valorant/v1/crosshair/generate?id=0%3BP%3Bc%3B8%3Bu%3BFF0000FF%3Bb%3B1"
+        class="crosshair-img"
+      />
+    </div>
+    <!--Si el usuario NO tiene cuenta en la pagina, no se muestra su crosshair-->
+  </div>
+  <div class="user-tag">
+    <p class="p-pos">Battler</p>
+    <p class="tag">#LAS</p>
   </div>
 </div>

@@ -8,8 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbmFormComponent } from './components/abm-form/abm-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AgentsListComponent } from './components/agents-list/agents-list.component';
-
-
+import { ProfileTemplateComponent } from './components/profile-template/profile-template.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +17,11 @@ import { AgentsListComponent } from './components/agents-list/agents-list.compon
     AbmListComponent,
     AbmFormComponent,
     LoginFormComponent,
-    AgentsListComponent
+    AgentsListComponent,
+    ProfileTemplateComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
