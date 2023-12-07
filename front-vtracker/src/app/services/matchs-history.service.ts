@@ -10,11 +10,13 @@ import { map, switchMap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class MatchsHistoryService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getMatchs(match: Matchs): Observable<Matchs[]> {
     return this.http
-      .get(`https://api.henrikdev.xyz/valorant/v3/matches/${match.region}/${match.name}/${match.tag}?mode=competitive`)
+      .get(
+        `https://api.henrikdev.xyz/valorant/v3/matches/${match.region}/${match.name}/${match.tag}?mode=competitive`
+      )
       .pipe(
         switchMap((response: any) => {
           if (response.status === 200) {
@@ -47,13 +49,16 @@ export class MatchsHistoryService {
   getMatchDetails(matches: Matchs[]): Observable<Matchs[]> {
     const mmrRequests = matches.map((match: Matchs) =>
       this.http
-        .get(`https://api.henrikdev.xyz/valorant/v1/mmr-history/${match.region}/${match.name}/${match.tag}`)
+        .get(
+          `https://api.henrikdev.xyz/valorant/v1/mmr-history/${match.region}/${match.name}/${match.tag}`
+        )
         .pipe(
           map((response: any) => {
             if (response.status === 200) {
               response.data.forEach((data: any) => {
                 if (data.match_id === match.match_id) {
                   match.mmr = data.mmr_change_to_last_game;
+                  match.map_id = data.map.id;
                   match.rank_img = data.images.large;
                 }
               });
