@@ -4,6 +4,7 @@ export class Matchs {
   region!: 'na';
   agent?: string;
   mapa?: string;
+  map_id?: string;
   match_id?: string;
   wins?: number;
   losses?: number;

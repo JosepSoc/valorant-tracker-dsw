@@ -32,14 +32,12 @@
         }
 
         .btn {
-          display: flex;
-          margin-left: auto;
-          color: white;
-          text-decoration: none;
-          &:focus {
-            outline: none;
-            box-shadow: none;
-          }
+            display: flex;
+            margin-left: auto;
+            color: white;
+            text-decoration: none;
+            
+            
 
           // style for the button
           &.btn-primary {
@@ -48,6 +46,7 @@
             background-color: $spc-red;
             border-radius: 5px;
             margin-top: -8px;
+            border-color: $spc-red;
           }
 
           &.mb-2 {

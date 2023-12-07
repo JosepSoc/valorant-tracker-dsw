@@ -2,27 +2,54 @@
   <div class="row">
     <div class="col">
       <form>
-        <h2>Sign up</h2>
-        <div class="form-group form-style">
+        <h2 #logHeader></h2>
+
+        <div #usernameBox class="form-group" >
           <input type="text" class="form-control" placeholder="Username" />
           <i class="fa-regular fa-user"></i>
         </div>
 
-        <div class="form-group form-style">
+        <div #passwordBox class="form-group">
           <input type="email" class="form-control" placeholder="Password" />
+          <i class="fa-solid fa-lock"></i>
         </div>
 
-        <div class="form-group form-style">
-          <input type="tel" class="form-control" placeholder="Confirm P" />
+        <div #confirmpassBox class="form-group" *ngIf="isRegister">
+          <input type="tel" class="form-control" placeholder="Confirm-password" />
+          <i class="fa-solid fa-lock"></i>
         </div>
 
-        <div class="form-group form-style">
-          <input type="text" class="form-control" placeholder="Text" />
+        <div #emailBox class="form-group" *ngIf="isRegister">
+          <input type="text" class="form-control" placeholder="Email" />
+          <i class="fa-solid fa-envelope"></i>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">
-          Enviar Formulario
+
+        <div #termsCheckBox class="form-check" *ngIf="isRegister">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+             I agree to the <a href="#">terms of service</a>
+          </label>
+        </div>
+
+        <p class="password-Help" *ngIf="!isRegister">forgot password?</p>
+
+        <button #loginBtn type="submit" class="login-btn" *ngIf="!isRegister">
+          <img class="go-btn" src="assets\loginButton.png" alt="">
         </button>
+        
+        <button #registerBtn type="submit" class="btn btn-primary mb-2" *ngIf="isRegister">
+          Start tracking!
+        </button>
+
+        <p #gotoLoginBtn class="form-changer" *ngIf="isRegister"> Already have an account? 
+          <a (click)="turnLogin()">Log in!</a> </p>
       </form>
     </div>
+    
+    <div class="signIsland">
+          <p class="form-changer" *ngIf="!isRegister"> Don't have an account? <a class="logAnchor" (click)="turnRegister()">
+            Sign up</a> </p>
+    </div>
+
   </div>
 </div>
