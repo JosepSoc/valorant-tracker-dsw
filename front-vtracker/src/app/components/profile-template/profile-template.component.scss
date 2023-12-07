@@ -2,7 +2,7 @@
 
 .main-container {
   //esto hay que traerlo de .get/v2/match/{matchId}
-  background-image: url("/assets/images/player-card-eg.png");
+  //background-image: url("/assets/images/player-card-eg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -54,7 +54,7 @@
     margin-top: 7vw;
     background-color: rgba(0, 0, 0, 0.5);
 
-    font-family: storm-gust;
+    font-family: text-font;
     font-size: 9vw;
     color: $spc-red;
     .tag {
@@ -66,7 +66,7 @@
       margin-left: 1.5vw;
     }
     .p-pos {
-      margin-left: 38vw;
+      margin-left: 34vw;
       margin-top: 2vw;
     }
   }
