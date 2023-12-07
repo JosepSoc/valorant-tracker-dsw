@@ -34,5 +34,7 @@ export class ProfileTemplateComponent {
     );
   }
 
+  //sacar esto de la bd
+  crosshairCode = '0;P;c;8;u;FF0000FF;b;1';
   hasCrosshair = true;
 }
