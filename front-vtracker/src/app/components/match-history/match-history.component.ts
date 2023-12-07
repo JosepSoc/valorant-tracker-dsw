@@ -12,7 +12,7 @@ export class MatchHistoryComponent implements OnInit {
   matchs: Matchs[] = [];
 
   ngOnInit(): void {
-    const match: Matchs = { name: 'primmieyk', tag: 'XGOD', region: 'ap' };
+    const match: Matchs = { name: 'D0V3S', tag: 'MOCHA', region: 'na' };
     //esto anda
     this.api.getMatchs(match).subscribe(
       (data: Matchs[]) => {

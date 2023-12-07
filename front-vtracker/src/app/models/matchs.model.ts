@@ -1,7 +1,7 @@
 export class Matchs {
-  name!: 'primmieyk';
-  tag!: 'XGOD';
-  region!: 'ap';
+  name!: 'D0V3S';
+  tag!: 'MOCHA';
+  region!: 'na';
   agent?: string;
   mapa?: string;
   match_id?: string;
