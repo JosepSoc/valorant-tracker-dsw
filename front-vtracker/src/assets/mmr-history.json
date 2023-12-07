@@ -1,0 +1,205 @@
+{
+  "status": 200,
+  "name": "primmieyk",
+  "tag": "XGOD",
+  "data": [
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "bb00f223-bce8-40d9-ba84-fa0fb7f0b99d",
+      "map": { "name": "Haven", "id": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1180,
+      "mmr_change_to_last_game": 13,
+      "elo": 3280,
+      "date": "Saturday, December 2, 2023 12:44 PM",
+      "date_raw": 1701521078
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "4052a344-3ddf-4d25-a4c9-b6070f798ce3",
+      "map": { "name": "Lotus", "id": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1167,
+      "mmr_change_to_last_game": -25,
+      "elo": 3267,
+      "date": "Saturday, December 2, 2023 12:04 PM",
+      "date_raw": 1701518640
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "9d1f8453-83a2-45b4-8326-95d5e1c49ef1",
+      "map": { "name": "Ascent", "id": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1192,
+      "mmr_change_to_last_game": 13,
+      "elo": 3292,
+      "date": "Saturday, December 2, 2023 11:24 AM",
+      "date_raw": 1701516253
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "efa0e585-bafd-48ce-b15d-5e12e187b8a6",
+      "map": { "name": "Lotus", "id": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1179,
+      "mmr_change_to_last_game": 12,
+      "elo": 3279,
+      "date": "Saturday, December 2, 2023 10:37 AM",
+      "date_raw": 1701513432
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "e07313c0-7ac8-4297-ae55-5c54c3f5633c",
+      "map": { "name": "Split", "id": "d960549e-485c-e861-8d71-aa9d1aed12a2" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1167,
+      "mmr_change_to_last_game": 13,
+      "elo": 3267,
+      "date": "Saturday, December 2, 2023 9:53 AM",
+      "date_raw": 1701510837
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "70b14cbc-6f49-465b-902f-1b4c206108a8",
+      "map": { "name": "Breeze", "id": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1154,
+      "mmr_change_to_last_game": 12,
+      "elo": 3254,
+      "date": "Friday, December 1, 2023 7:03 PM",
+      "date_raw": 1701457392
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "8d32f5a0-1649-4a06-a53b-e426fce2b01c",
+      "map": { "name": "Sunset", "id": "92584fbe-486a-b1b2-9faa-39b0f486b498" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1142,
+      "mmr_change_to_last_game": -24,
+      "elo": 3242,
+      "date": "Friday, December 1, 2023 6:16 PM",
+      "date_raw": 1701454561
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "b5988edf-15a7-45b0-ae59-196a5a4c8f58",
+      "map": { "name": "Lotus", "id": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1166,
+      "mmr_change_to_last_game": -25,
+      "elo": 3266,
+      "date": "Friday, December 1, 2023 5:25 PM",
+      "date_raw": 1701451533
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "0ba886d6-6b45-4040-b12c-e7d58e0127bf",
+      "map": { "name": "Ascent", "id": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1191,
+      "mmr_change_to_last_game": 13,
+      "elo": 3291,
+      "date": "Friday, December 1, 2023 4:55 PM",
+      "date_raw": 1701449701
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "978ddaba-267f-44e1-b6f8-399ca1f7872b",
+      "map": { "name": "Bind", "id": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1178,
+      "mmr_change_to_last_game": 12,
+      "elo": 3278,
+      "date": "Friday, December 1, 2023 4:11 PM",
+      "date_raw": 1701447084
+    },
+    {
+      "currenttier": 27,
+      "currenttierpatched": "Radiant",
+      "images": {
+        "small": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/smallicon.png",
+        "large": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png",
+        "triangle_down": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangledownicon.png",
+        "triangle_up": "https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/ranktriangleupicon.png"
+      },
+      "match_id": "7857fc59-850f-4561-b1ce-3208051565fb",
+      "map": { "name": "Haven", "id": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047" },
+      "season_id": "4401f9fd-4170-2e4c-4bc3-f3b4d7d150d1",
+      "ranking_in_tier": 1166,
+      "mmr_change_to_last_game": 13,
+      "elo": 3266,
+      "date": "Friday, December 1, 2023 3:23 PM",
+      "date_raw": 1701444207
+    }
+  ]
+}
