@@ -1,0 +1,23 @@
+<div class="home-container">
+  <form class="form-container">
+    <input
+      type="text"
+      [formControl]="name"
+      placeholder="Search player name"
+      id="input-name"
+      value=""
+      (keyup)="handleKeyUp($event)"
+    />
+    <input
+      type="text"
+      [formControl]="tag"
+      placeholder="#TAG"
+      name="input-tag"
+      id="input-tag"
+      value=""
+      (keyup)="handleKeyUp($event)"
+    />
+  </form>
+  {{ name.value }}
+  {{ tag.value }}
+</div>
