@@ -1,0 +1,26 @@
+<div class="main-container" [style.backgroundImage]="'url(' + playerCard + ')'">
+  <div class="profile-main">
+    <!--la imagen de abajo sacarla de la request matchid-->
+    <img src="{{ playerAgent }}" />
+    <!--la imagen de abajo sacarla de la request mmr-history-->
+    <img src="{{ playerMmrIcon }}" class="rank-img" />
+    <!--la imagen de abajo generarla con la request a henrik de crosshair en base al codigo del user-->
+
+    <div class="crosshair" *ngIf="hasCrosshair">
+      <img src="assets/images/cross-hair-bg2.png" class="crosshair-bg-img" />
+
+      <img
+        src="https://api.henrikdev.xyz/valorant/v1/crosshair/generate?id={{
+          crosshairCode
+        }}"
+        class="crosshair-img"
+      />
+    </div>
+    <!--Si el usuario NO tiene cuenta en la pagina, no se muestra su crosshair-->
+  </div>
+  <div class="user-tag">
+    <p class="p-pos">{{ name }}</p>
+
+    <p class="tag">#{{ tag }}</p>
+  </div>
+</div>

@@ -2,6 +2,7 @@ export class Matchs {
   name!: 'D0V3S';
   tag!: 'MOCHA';
   region!: 'na';
+  card?: string;
   agent?: string;
   mapa?: string;
   map_id?: string;

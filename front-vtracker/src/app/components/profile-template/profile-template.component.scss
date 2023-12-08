@@ -1,0 +1,73 @@
+@import "src/styles.scss";
+
+.main-container {
+  //esto hay que traerlo de .get/v2/match/{matchId}
+  //background-image: url("/assets/images/player-card-eg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vw;
+
+  .profile-main {
+    position: relative;
+    left: 32.5%;
+    top: 5%;
+    background-color: $spc-darker-blue;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    border: 1px solid $spc-red;
+
+    img {
+      width: 85%;
+      height: 85%;
+      margin-left: 3vw;
+      margin-top: 5.5vw;
+      border-radius: 50%;
+    }
+    .rank-img {
+      width: 40%;
+      height: 40%;
+      margin-left: 60%;
+      margin-top: -30%;
+      z-index: 1;
+    }
+    .crosshair-img {
+      width: 70%;
+      height: 70%;
+      margin-left: 32vw;
+      margin-top: -85vw;
+    }
+    .crosshair-bg-img {
+      border-radius: 0;
+      width: 65%;
+      height: 40%;
+      margin-left: 33.5vw;
+      margin-top: -76.6vw;
+    }
+  }
+  .user-tag {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+    margin-top: 7vw;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    font-family: text-font;
+    font-size: 9vw;
+    color: $spc-red;
+    .tag {
+      font-family: text-font;
+      font-weight: 700;
+      color: $spc-light-red;
+      font-size: 3vw;
+
+      margin-left: 1.5vw;
+    }
+    .p-pos {
+      margin-left: 34vw;
+      margin-top: 2vw;
+    }
+  }
+}

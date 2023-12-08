@@ -10,6 +10,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { AgentsListComponent } from './components/agents-list/agents-list.component';
 import { MatchHistoryComponent } from './components/match-history/match-history.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileTemplateComponent } from './components/profile-template/profile-template.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AbmListComponent,
     AbmFormComponent,
     LoginFormComponent,
+    AgentsListComponent,
+    ProfileTemplateComponent,
     AgentsListComponent,
     MatchHistoryComponent,
   ],
