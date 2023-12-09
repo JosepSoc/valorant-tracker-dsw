@@ -75,8 +75,8 @@ export class MatchsHistoryService {
     let agent: Agent = {};
     for (let i = 0; i < matchs.players.all_players.length; i++) {
       if (
-        matchs.players.all_players[i].name === name &&
-        matchs.players.all_players[i].tag === tag
+        (matchs.players.all_players[i].name).toLowerCase() === name.toLowerCase() &&
+        (matchs.players.all_players[i].tag).toLowerCase() === tag.toLowerCase()
       ) {
         agent = {
           matchid: matchs.metadata.matchid,

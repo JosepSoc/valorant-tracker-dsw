@@ -1,23 +1,25 @@
 <div class="home-container">
-  <form class="form-container">
-    <input
-      type="text"
-      [formControl]="name"
-      placeholder="Search player name"
-      id="input-name"
-      value=""
-      (keyup)="handleKeyUp($event)"
-    />
-    <input
-      type="text"
-      [formControl]="tag"
-      placeholder="#TAG"
-      name="input-tag"
-      id="input-tag"
-      value=""
-      (keyup)="handleKeyUp($event)"
-    />
+  <form class="form-container" [formGroup]="formplayer" (ngSubmit)="onSubmit()">
+    <div class="inputs">
+      <input
+        type="text"
+        name="username"
+        formControlName="username"
+        placeholder="Search player name and TAG"
+        id="input-name"
+      />
+      <select id="input-region" formControlName="userregion">
+        <option value="" disabled selected>Region</option>
+        <option value="ap">AP</option>
+        <option value="br">BR</option>
+        <option value="eu">EU</option>
+        <option value="kr">KR</option>
+        <option value="latam">LATAM</option>
+        <option value="na">NA</option>
+      </select>
+    </div>
+    <button type="submit" class="go-btn">
+      <img class="go-img" src="assets\loginButton.png" alt="" />
+    </button>
   </form>
-  {{ name.value }}
-  {{ tag.value }}
 </div>
