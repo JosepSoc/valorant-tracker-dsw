@@ -1,0 +1,89 @@
+@import "src/styles.scss";
+
+.container-mhistory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 15px;
+  background-color: $spc-card-bg;
+  border: 2px solid $spc-head-blue;
+  border-radius: 15px;
+  > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-size: 28px;
+    font-weight: 700;
+    color: $spc-red;
+    margin: 20px 15px 10px 15px;
+  }
+  .match-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    height: 55px;
+    margin-bottom: 5px;
+    background-color: $spc-card-bg2;
+    color: $spc-red;
+    border-radius: 15px;
+
+    .container-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: auto;
+      width: 30vw;
+      padding-right: 30px;
+      background-size: cover;
+      background-position: bottom;
+      border-radius: 10px;
+      margin-left: 2px;
+      #agent-img {
+        width: auto;
+        height: 50px;
+        padding-left: 10px;
+        border-radius: 15px;
+      }
+      #rank-img {
+        width: auto;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 15px;
+      }
+    }
+    .result {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14vw;
+    }
+    .rank {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 10vw;
+    }
+    .kda-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 18vw;
+    }
+    .mode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 22vw;
+    }
+  }
+}
