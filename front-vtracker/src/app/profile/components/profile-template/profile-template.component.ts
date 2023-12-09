@@ -1,14 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { Matchs } from 'src/app/models/matchs.model';
-import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
+//import { UsersApiService } from 'src/app/services/users-api.service.js';
 
 @Component({
   selector: 'app-profile-template',
   templateUrl: './profile-template.component.html',
   styleUrls: ['./profile-template.component.scss'],
 })
+
+//? crear en el constructor la variable que se va a usar para traer los datos de la DB
 export class ProfileTemplateComponent {
-  constructor(private api: MatchsHistoryService) { }
+  constructor() { }
+
   @Input()
   matchs!: Matchs[];
   name!: string;
@@ -16,26 +19,43 @@ export class ProfileTemplateComponent {
   playerAgent?: string;
   playerCard?: string;
   playerMmrIcon?: string;
+  user: any;
+  
+  //userId!: string;
 
-  ngOnInit(): void {
-    const match: Matchs = { name: 'D0V3S', tag: 'MOCHA', region: 'na' };
-
-    this.api.getMatchs(match).subscribe(
-      (data: Matchs[]) => {
-        this.matchs = data;
-        this.name = this.matchs[0].name;
-        this.tag = this.matchs[0].tag;
-        this.playerAgent = this.matchs[0].agent;
-        this.playerCard = this.matchs[0].card;
-        this.playerMmrIcon = this.matchs[0].rank_img;
-      },
-      (error: any) => {
-        console.error('Error fetching match history:', error);
-      }
-    );
-  }
-
-  //sacar esto de la bd
+  //? Sacar esto de la DB en base a lo de abajo.
   crosshairCode = '0;P;c;8;u;FF0000FF;b;1';
   hasCrosshair = true;
+
+  ngOnInit(): void {
+    
+    //? En la implementacion final, se debe crear un metodo que busque por username, tag y region para devolver el ObjectID
+    // this.api.getUser().subscribe({
+    //   next: (data: any) => {
+    //     this.user = data;
+    //   },
+    //   error: (error: any) => {
+    //     console.error('Error fetching user:', error);
+    //   }
+    // });
+
+    // if (this.user.crosshair == null || this.user == undefined){
+    //   this.hasCrosshair = false;
+    // }
+    // else { 
+    //   this.crosshairCode = this.user.crosshair;
+    //   this.hasCrosshair = true;
+    // }
+    //}
+
+    this.name = this.matchs[0].name;
+    this.tag = this.matchs[0].tag;
+    this.playerAgent = this.matchs[0].agent;
+    this.playerCard = this.matchs[0].card;
+    this.playerMmrIcon = this.matchs[0].rank_img;
+  
+ }
 }
+
+
+
