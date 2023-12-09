@@ -14,11 +14,6 @@ export class ProfileTemplateComponent {
 
   @Input()
   matchs!: Matchs[];
-  name!: string;
-  tag!: string;
-  playerAgent?: string;
-  playerCard?: string;
-  playerMmrIcon?: string;
   user: any;
   
   //userId!: string;
@@ -47,13 +42,6 @@ export class ProfileTemplateComponent {
     //   this.hasCrosshair = true;
     // }
     //}
-
-    this.name = this.matchs[0].name;
-    this.tag = this.matchs[0].tag;
-    this.playerAgent = this.matchs[0].agent;
-    this.playerCard = this.matchs[0].card;
-    this.playerMmrIcon = this.matchs[0].rank_img;
-  
  }
 }
 
