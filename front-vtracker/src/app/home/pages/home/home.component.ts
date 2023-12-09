@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,19 +9,22 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  formplayer = new FormGroup({
+    username: new FormControl('', Validators.required),
+    userregion: new FormControl('', Validators.required)
+  });
 
-  name = new FormControl('', [Validators.required]);
-  tag = new FormControl('', [Validators.required]);
+  constructor(private router: Router) { }
 
-  handleKeyUp(e: KeyboardEvent) {
-    if (e.keyCode === 13) {
-      this.submit();
+  onSubmit(): any {
+    if (this.formplayer.get('username')?.value !== '' && this.formplayer.get('userregion')?.value !== '') {
+      let user = (this.formplayer.get('username')?.value)?.split('#') || '';
+      localStorage.setItem('matchs', JSON.stringify([]));
+      this.router.navigate(['/profile'], { queryParams: { username: user[0], tag: user[1], region: this.formplayer.get('userregion')?.value } });
+
+    } else {
+      console.log('Form not submitted');
     }
-
-  }
-
-  submit() {
-    console.log(this.name.value + ' ' + this.tag.value);
   }
 
 }

@@ -5,7 +5,7 @@ import { MatchHistoryComponent } from './components/match-history/match-history.
 import { ProfileTemplateComponent } from './components/profile-template/profile-template.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileRoutingModule } from './profile-routing.module';
-import { SharedModule } from '../shared/shared.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -19,6 +19,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ProfileRoutingModule,
+    MatProgressSpinnerModule
   ]
 })
 export class ProfileModule { }

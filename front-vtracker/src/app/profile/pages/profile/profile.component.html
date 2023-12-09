@@ -1,5 +1,8 @@
-<app-profile-template [matchs]="matchs"></app-profile-template>
-<div class="profile-container">
-  <app-agents-list [matchs]="matchs"></app-agents-list>
-  <app-match-history [matchs]="matchs"></app-match-history>
+<div *ngIf="matchs.length > 0">
+  <app-profile-template [matchs]="matchs"></app-profile-template>
+  <div class="profile-container">
+    <app-agents-list [matchs]="matchs"></app-agents-list>
+    <app-match-history [matchs]="matchs"></app-match-history>
+  </div>
 </div>
+<div *ngIf="matchs.length <= 0"><mat-spinner></mat-spinner></div>
