@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Matchs } from 'src/app/models/matchs.model';
 import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
 
@@ -8,13 +8,14 @@ import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
   styleUrls: ['./profile-template.component.scss'],
 })
 export class ProfileTemplateComponent {
-  constructor(private api: MatchsHistoryService) {}
-  matchs: Matchs[] = [];
-  name: string = '?';
-  tag: string = '?';
-  playerAgent?: string = '?';
-  playerCard?: string = '?';
-  playerMmrIcon?: string = '?';
+  constructor(private api: MatchsHistoryService) { }
+  @Input()
+  matchs!: Matchs[];
+  name!: string;
+  tag!: string;
+  playerAgent?: string;
+  playerCard?: string;
+  playerMmrIcon?: string;
 
   ngOnInit(): void {
     const match: Matchs = { name: 'D0V3S', tag: 'MOCHA', region: 'na' };

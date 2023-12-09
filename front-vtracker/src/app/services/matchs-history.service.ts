@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { Matchs } from '../models/matchs.model';
-import { Mmr } from '../models/mmr.model';
 import { Agent } from '../models/agent.model';
 import { map, switchMap } from 'rxjs/operators';
 
@@ -10,7 +9,7 @@ import { map, switchMap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class MatchsHistoryService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getMatchs(match: Matchs): Observable<Matchs[]> {
     return this.http

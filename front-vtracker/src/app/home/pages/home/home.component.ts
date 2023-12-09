@@ -12,7 +12,6 @@ export class HomeComponent {
   name = new FormControl('', [Validators.required]);
   tag = new FormControl('', [Validators.required]);
 
-
   handleKeyUp(e: KeyboardEvent) {
     if (e.keyCode === 13) {
       this.submit();

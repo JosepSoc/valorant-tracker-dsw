@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Matchs } from 'src/app/models/matchs.model';
 import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
 
@@ -7,22 +7,12 @@ import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
   templateUrl: './match-history.component.html',
   styleUrls: ['./match-history.component.scss'],
 })
-export class MatchHistoryComponent implements OnInit {
-  constructor(private api: MatchsHistoryService) {}
-  matchs: Matchs[] = [];
+export class MatchHistoryComponent {
+  @Input()
+  matchs!: Matchs[];
 
-  ngOnInit(): void {
-    const match: Matchs = { name: 'D0V3S', tag: 'MOCHA', region: 'na' };
-    //esto anda
-    this.api.getMatchs(match).subscribe(
-      (data: Matchs[]) => {
-        this.matchs = data;
-      },
-      (error: any) => {
-        console.error('Error fetching match history:', error);
-      }
-    );
-  }
+  constructor() { }
+
 
   // matchs = [
   //   {

@@ -1,3 +1,5 @@
-<app-profile-template></app-profile-template>
-<app-agents-list></app-agents-list>
-<app-match-history></app-match-history>
+<app-profile-template [matchs]="matchs"></app-profile-template>
+<div class="profile-container">
+  <app-agents-list [matchs]="matchs"></app-agents-list>
+  <app-match-history [matchs]="matchs"></app-match-history>
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Matchs } from 'src/app/models/matchs.model';
 
 @Component({
   selector: 'app-agents-list',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./agents-list.component.scss']
 })
 export class AgentsListComponent {
+  @Input()
+  matchs!: Matchs[];
   wins = 0;
   losses = 0;
   porcentaje: number = 0;
