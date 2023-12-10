@@ -12,9 +12,7 @@ export class ProfileComponent {
   match!: Matchs;
   matchs!: Matchs[];
 
-  constructor(private api: MatchsHistoryService, private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
+  constructor(private api: MatchsHistoryService, private route: ActivatedRoute) {
     this.route.queryParamMap.subscribe(params => {
       this.match = {
         name: params.get('username') || '',
@@ -22,6 +20,10 @@ export class ProfileComponent {
         region: params.get('region') || '',
       }
     });
+  }
+
+  ngOnInit(): void {
+
     this.matchs = localStorage.getItem('matchs') != null ? JSON.parse(localStorage.getItem('matchs') || '{}') : [];
 
     if (this.matchs.length === 0) {

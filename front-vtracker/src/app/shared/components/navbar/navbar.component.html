@@ -1,4 +1,4 @@
-<nav class="container-nav" *ngIf="!searchMode">
+<nav class="container-nav" *ngIf="searchMode">
   <a routerLink="/home" class="losttrack-logo">
     <img src="./assets/LostTrack.svg" alt="Losttack" />
   </a>
@@ -12,21 +12,31 @@
   </div>
 </nav>
 
-<div *ngIf="searchMode" class="search-box">
-  <form class="search-form">
-    <div class="input-group custom-search">
+<div *ngIf="!searchMode" class="search-box">
+  <form class="form-container" [formGroup]="navform" (ngSubmit)="onSubmit()">
+    <div class="inputs">
       <input
         type="text"
-        class="form-control custom-search-input"
-        placeholder="Buscar"
+        name="navuser"
+        formControlName="navuser"
+        placeholder="Search player name and TAG"
+        id="input-name"
       />
-      <button
-        class="btn btn-primary custom-search-botton"
-        type="submit"
-        (click)="toggleSearchMode()"
-      >
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+      <select id="input-region" formControlName="navregion">
+        <option value="" disabled selected>Region</option>
+        <option value="ap">AP</option>
+        <option value="br">BR</option>
+        <option value="eu">EU</option>
+        <option value="kr">KR</option>
+        <option value="latam">LATAM</option>
+        <option value="na">NA</option>
+      </select>
     </div>
+    <button type="submit" class="go-btn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button (click)="toggleSearchMode()" id="cross-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
   </form>
 </div>
