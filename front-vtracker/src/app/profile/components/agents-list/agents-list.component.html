@@ -1,7 +1,7 @@
 <div class="container-agent">
   <div class="agent-title">
     <p>AGENTS</p>
-    <p>{{ wins }} W - {{ losses }} L</p>
+    <p id="winloss">{{ wins }}W - {{ losses }}L</p>
     <p>{{ porcentaje }}%</p>
   </div>
   <div *ngFor="let agent of agents; index as i" class="agent-card">

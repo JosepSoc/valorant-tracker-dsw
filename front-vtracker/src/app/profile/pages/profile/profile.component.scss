@@ -9,10 +9,27 @@
   background-color: $spc-darker-blue;
   app-agents-list {
     margin-bottom: 5px;
+    width: 90%;
     margin-top: 10px;
   }
   app-match-history {
     margin-bottom: 10px;
+    width: 90%;
     margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    app-agents-list {
+      width: 35%;
+    }
+    app-match-history {
+      margin-top: 10px;
+      width: 60%;
+    }
   }
 }
