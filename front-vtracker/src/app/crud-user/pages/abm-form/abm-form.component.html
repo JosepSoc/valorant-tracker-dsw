@@ -7,30 +7,31 @@
 
 
         <div class="form-group form-style">
-          <input type="text" #puuidBox class="form-control" placeholder="Puuid" />
+          <input type="text" [formControl]="puuid"   class="form-control" placeholder="Puuid" />
         </div>
 
         <div class="form-group form-style">
-          <input type="text" #usernameBox class="form-control" placeholder="Username" />
+          <input type="text" [formControl]="username"  class="form-control" placeholder="Username" />
         </div>
 
         <div class="form-group form-style">
-          <input type="text" #passwordBox class="form-control" placeholder="Password" />
+          <input type="text" [formControl]="password"  class="form-control" placeholder="Password" />
         </div>
 
         <div class="form-group form-style">
-          <input type="email" #emailBox class="form-control" placeholder="Email" />
+          <input type="email" [formControl]="email"  class="form-control" placeholder="Email" />
         </div>
 
         <div class="form-group form-style">
-          <input type="text" #crosshairBox class="form-control" placeholder="Crosshair" />
+          <input type="text" [formControl]="crosshair"  class="form-control" placeholder="Crosshair" />
         </div>
 
-        <button (click)="clearFields()" type="reset" class="btn">Clear fields</button>
+        <button (click)="previousValues()" type="button" class="btn">Reset {{entityText}}</button>
 
-        <button type="submit" class="btn btn-primary mb-2">
+        <button mat-buttom (click)="updateUser()" type="button" class="btn btn-primary mb-2">
           Confirm
         </button>
+        
         
       </form>
     </div>
