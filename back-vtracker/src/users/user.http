@@ -10,10 +10,10 @@ Content-Type: application/json
 
 {
   "puuid": "qHn0uNkpA1T-NqQ0zHTEqNh1BhH5SAsGWwkttacbeKBqSdkUEaYOcYNjyutq60vMrLWHu4ulYg1C5Q",
-  "name_lastname": "el gordo guma",
-  "email": "gumayusi@gmail.com",
+  "username": "chaki2",
+  "email": "asld@gmail.com",
   "crosshair": "0;P;c;5;o;1;d;1;0b;0",
-  "password": "gangplank",
+  "password": "asdnk",
   "agents": ["Omen", "Sage", "Brimstone"]
 }
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 {
   "puuid": "qHn0uNkpA1T-NqQ0zasfasfsafsaNjDomm40yMrLWHu4ulYg1C5Q",
-  "name_lastname": "Santi Montecino",
+  "username": "Santi Montecino",
   "email": "santimonte@gmail.com",
   "crosshair": "0;P;c;5;o;1;d;1;0b;0",
   "password": "homerochino",
