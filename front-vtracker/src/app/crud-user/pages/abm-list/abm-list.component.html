@@ -8,7 +8,9 @@
         <span>Username</span>
       </th>
       <th class="button-head">
-        <span>Username</span>
+        <button mat-mini-fab aria-label="Button with plus simbol" style="background-color: #fa4454" (click)="createUser()">
+          <mat-icon class="add-button">add</mat-icon>
+        </button>
       </th>
     </tr>
   </thead>
@@ -16,7 +18,7 @@
     <tr class="abm-list-item">
       <td class="abm-list-item-content">
         <div class="abm-list-item-content-text">
-          <span>{{ s.user }}</span>
+          <span>{{ s.username }}</span>
         </div>
       </td>
 
@@ -47,3 +49,4 @@
     </tr>
   </tbody>
 </table>
+

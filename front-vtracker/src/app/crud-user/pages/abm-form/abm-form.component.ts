@@ -16,7 +16,7 @@ export class AbmFormComponent {
   constructor(public dialog: MatDialog, private router: ActivatedRoute, private api: UsersApiService, private router2: Router) { }
 
   entityText = 'User';
-  
+  isUpdate = false;
   
   puuid = new FormControl('', [Validators.required]);
   username = new FormControl('', [Validators.required]);
@@ -34,6 +34,17 @@ export class AbmFormComponent {
     });
   }
 
+  isUpdateChecker(): boolean {
+    this.router.queryParamMap.subscribe(params => {
+      if(params.get('id')===null){
+        this.isUpdate = false;
+      } else {
+        this.isUpdate = true;
+      }
+    });
+    return this.isUpdate;
+  }
+
   previousValues() {
     this.router.queryParamMap.subscribe(params => {
       this.puuid.setValue(params.get('puuid'));
@@ -48,7 +59,7 @@ export class AbmFormComponent {
     return {
       _id: this.router.snapshot.queryParamMap.get('id') || '',
       puuid: this.puuid.value || '',
-      user: this.username.value || '',
+      username: this.username.value || '',
       password: this.password.value || '',
       email: this.email.value || '',
       crosshair: this.crosshair.value || ''
@@ -77,6 +88,28 @@ export class AbmFormComponent {
         }
       });
     
+  }
+
+  createUser(): void {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+        panelClass: 'confirm-dialog',
+        width: '250px',
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){
+          const createdUser = this.getFormValues();
+          this.api.createUser(createdUser).subscribe({
+            next: (data: any) => {
+              console.log(data);
+            },
+            error: (error: any) => {
+              console.error('Error updating user:', error);
+            }
+          });
+          this.router2.navigate(['/abm']);
+        }
+      });
   }
   
   }

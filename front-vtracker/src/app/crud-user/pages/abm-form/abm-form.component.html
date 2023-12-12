@@ -28,8 +28,12 @@
 
         <button (click)="previousValues()" type="button" class="btn">Reset {{entityText}}</button>
 
-        <button mat-buttom (click)="updateUser()" type="button" class="btn btn-primary mb-2">
+        <button mat-buttom (click)="updateUser()" type="button" class="btn btn-primary mb-2" *ngIf="isUpdateChecker()">
           Confirm
+        </button>
+
+        <button mat-buttom (click)="createUser()" type="button" class="btn btn-primary mb-2" *ngIf="!isUpdateChecker()">
+          Create
         </button>
         
         

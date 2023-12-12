@@ -1,6 +1,6 @@
 export class Users {
     puuid!: string;
-    user!: string;
+    username!: string;
     email!: string;
     crosshair!: string;
     password!: string;

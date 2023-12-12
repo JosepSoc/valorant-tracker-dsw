@@ -47,8 +47,12 @@ export class AbmListComponent {
   }  
 
   updateUser(pos: number): void {
-    this.router.navigate(['/abm/form'], { queryParams: { id: this.users[pos]._id, puuid: this.users[pos].puuid, username: this.users[pos].user, password: this.users[pos].password, email: this.users[pos].email, crosshair: this.users[pos].crosshair }});
+    this.router.navigate(['/abm/form'], { queryParams: { id: this.users[pos]._id, puuid: this.users[pos].puuid, username: this.users[pos].username, password: this.users[pos].password, email: this.users[pos].email, crosshair: this.users[pos].crosshair }});
     
+  }
+
+  createUser(): void {
+    this.router.navigate(['/abm/form']);
   }
 
   

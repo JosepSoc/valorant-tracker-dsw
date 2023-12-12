@@ -8,6 +8,8 @@ import { AbmFormComponent } from './pages/abm-form/abm-form.component';
 import { AbmListComponent } from './pages/abm-list/abm-list.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
     CrudUserRoutingModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule
 
   ]
 })
