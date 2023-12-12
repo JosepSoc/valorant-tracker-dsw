@@ -1,4 +1,4 @@
-<nav class="container-nav" *ngIf="searchMode">
+<nav class="container-nav" *ngIf="!searchMode">
   <a routerLink="/home" class="losttrack-logo">
     <img src="./assets/LostTrack.svg" alt="Losttack" />
   </a>
@@ -12,7 +12,7 @@
   </div>
 </nav>
 
-<div *ngIf="!searchMode" class="search-box">
+<div *ngIf="searchMode" class="search-box">
   <form class="form-container" [formGroup]="navform" (ngSubmit)="onSubmit()">
     <div class="inputs">
       <input
