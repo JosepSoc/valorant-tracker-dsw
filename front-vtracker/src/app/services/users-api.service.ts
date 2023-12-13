@@ -19,7 +19,7 @@ export class UsersApiService {
             return response.data.map((data: any) => {
               return {
                 puuid: data.puuid,
-                user: data.name_lastname,
+                username: data.username,
                 email: data.email,
                 crosshair: data.crosshair,
                 password: data.password,
@@ -42,7 +42,7 @@ export class UsersApiService {
           if (response.status === 200 && response.body.data) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -64,7 +64,7 @@ export class UsersApiService {
           if (response.status === 201) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -88,7 +88,7 @@ export class UsersApiService {
           if (response.status === 200) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -110,7 +110,7 @@ export class UsersApiService {
           if (response.status === 200) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,

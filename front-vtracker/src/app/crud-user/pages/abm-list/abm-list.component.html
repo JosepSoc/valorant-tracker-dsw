@@ -8,15 +8,17 @@
         <span>Username</span>
       </th>
       <th class="button-head">
-        <span>Username</span>
+        <button mat-mini-fab aria-label="Button with plus simbol" style="background-color: #fa4454" (click)="createUser()">
+          <mat-icon class="add-button">add</mat-icon>
+        </button>
       </th>
     </tr>
   </thead>
-  <tbody class="abm-list-content">
+  <tbody class="abm-list-content" *ngFor="let s of users; index as i">
     <tr class="abm-list-item">
       <td class="abm-list-item-content">
         <div class="abm-list-item-content-text">
-          <span>Battler</span>
+          <span>{{ s.username }}</span>
         </div>
       </td>
 
@@ -26,6 +28,7 @@
             class="abm-list-item-button-Update"
             name="update"
             value="update"
+            (click)="updateUser(i)"
           >
             Update
           </button>
@@ -37,31 +40,7 @@
             class="abm-list-item-button-Delete"
             name="delete"
             value="delete"
-          >
-            Delete
-          </button>
-        </div>
-      </td>
-    </tr>
-    <tr class="abm-list-item">
-      <td>Chester</td>
-      <td class="abm-list-item-content">
-        <div class="abm-list-item-button-Update">
-          <button
-            class="abm-list-item-button-Update"
-            name="update"
-            value="update"
-          >
-            Update
-          </button>
-        </div>
-      </td>
-      <td class="abm-list-item-content">
-        <div class="abm-list-item-button-Delete">
-          <button
-            class="abm-list-item-button-Delete"
-            name="delete"
-            value="delete"
+            (click)="deleteUser(i)"
           >
             Delete
           </button>
@@ -70,3 +49,4 @@
     </tr>
   </tbody>
 </table>
+
