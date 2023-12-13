@@ -1,6 +1,15 @@
 <div class="container-mhistory">
   <p>MATCH HISTORY</p>
-  <div *ngFor="let m of matchs; index as i" class="match-card">
+  <div
+    *ngFor="let m of matchs; index as i"
+    class="match-card"
+    [ngStyle]="
+      (m.wins === undefined ? 1 : m.wins) >
+      (m.losses === undefined ? 2 : m.losses)
+        ? { 'box-shadow': 'inset 0px 0px 20px 1px #5ee790' }
+        : { 'box-shadow': 'inset 0px 0px 20px 0px #e4485d' }
+    "
+  >
     <div
       class="container-img"
       [style.backgroundImage]="

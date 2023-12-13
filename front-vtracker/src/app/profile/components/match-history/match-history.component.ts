@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Matchs } from 'src/app/models/matchs.model';
-import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
+
 
 @Component({
   selector: 'app-match-history',
@@ -13,4 +13,14 @@ export class MatchHistoryComponent {
 
   constructor() { }
 
+  ngOnInit(): void {
+    this.matchs.forEach((match) => {
+      if ((match.wins ?? 0) > (match.losses ?? 0)) {
+        match.win = true;
+      } else {
+        match.win = false;
+      }
+    });
+    console.log(this.matchs);
+  }
 }
