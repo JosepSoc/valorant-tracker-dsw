@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { AgentApi } from '../models/agent-api.model';
+import { AgentApi } from '../../models/agent-api.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AgentsApiService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAgents(): Observable<AgentApi[]> {
-    return this.http
-     .get('http://localhost:5000/api/agents')
-     .pipe(
-       map((response: any) => {
-         if (response.data) {
-           return response.data.map((data: any) => {
-             return {
-               name: data.name,
-               description: data.description,
-               _id: data._id,
-             };
-           });
-         } else {
-           throw new Error('Error fetching agents');
-         }
-       })
-     );
+    return this.http.get('http://localhost:5000/api/agents').pipe(
+      map((response: any) => {
+        if (response.data) {
+          return response.data.map((data: any) => {
+            return {
+              name: data.name,
+              description: data.description,
+              _id: data._id,
+            };
+          });
+        } else {
+          throw new Error('Error fetching agents');
+        }
+      })
+    );
   }
 
   getAgent(id: string): Observable<AgentApi> {
@@ -68,7 +65,9 @@ export class AgentsApiService {
 
   updateAgent(agent: AgentApi): Observable<AgentApi> {
     return this.http
-      .put(`http://localhost:5000/api/agents/${agent._id}`, agent, { observe: 'response' })
+      .put(`http://localhost:5000/api/agents/${agent._id}`, agent, {
+        observe: 'response',
+      })
       .pipe(
         map((response: HttpResponse<any>) => {
           if (response.status === 200 && response.body.data) {
