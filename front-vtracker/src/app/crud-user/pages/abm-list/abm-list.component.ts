@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Users } from 'src/app/models/users.model';
 import { UsersApiService } from 'src/app/services/users-api.service';
-import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
@@ -47,12 +47,12 @@ export class AbmListComponent {
   }  
 
   updateUser(pos: number): void {
-    this.router.navigate(['/abm/form'], { queryParams: { id: this.users[pos]._id, puuid: this.users[pos].puuid, username: this.users[pos].username, password: this.users[pos].password, email: this.users[pos].email, crosshair: this.users[pos].crosshair }});
+    this.router.navigate(['/user/form'], { queryParams: { id: this.users[pos]._id, puuid: this.users[pos].puuid, username: this.users[pos].username, password: this.users[pos].password, email: this.users[pos].email, crosshair: this.users[pos].crosshair }});
     
   }
 
   createUser(): void {
-    this.router.navigate(['/abm/form']);
+    this.router.navigate(['/user/form']);
   }
 
   
