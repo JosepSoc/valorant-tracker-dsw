@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
 import { CrudUserModule } from './crud-user/crud-user.module';
+import { CrudAgentRoutingModule } from './crud-agent/crud-agent-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CrudUserModule } from './crud-user/crud-user.module';
     HttpClientModule,
     ProfileModule,
     CrudUserModule,
-    SharedModule
+    SharedModule,
+    CrudAgentRoutingModule
   ],
   exports: [],
   providers: [],

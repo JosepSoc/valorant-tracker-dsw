@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Matchs } from 'src/app/models/matchs.model';
-import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
+import { MatchsHistoryService } from 'src/app/services/henrik-valo-api/matchs-history.service';
 
 @Component({
   selector: 'app-match-history',
@@ -11,6 +11,5 @@ export class MatchHistoryComponent {
   @Input()
   matchs!: Matchs[];
 
-  constructor() { }
-
+  constructor() {}
 }
