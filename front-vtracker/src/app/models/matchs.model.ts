@@ -15,4 +15,5 @@ export class Matchs {
   mode?: string;
   mmr?: number;
   rank_img?: string;
+  win?: boolean;
 }
