@@ -1,0 +1,10 @@
+<div class="main-container">
+  <h1 mat-dialog-title>Confirm</h1>
+  <div mat-dialog-content>
+    Are you sure you want to alter this entity?
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close [mat-dialog-close]="false">Cancel</button>
+    <button mat-button mat-dialog-close cdkFocusInitial [mat-dialog-close]="true">Yes</button>
+  </div>
+</div>

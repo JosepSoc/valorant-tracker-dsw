@@ -1,28 +1,35 @@
 import { Component, Input } from '@angular/core';
 import { Matchs } from 'src/app/models/matchs.model';
-import { MatchsHistoryService } from 'src/app/services/matchs-history.service';
+import { MatchsHistoryService } from 'src/app/services/henrik-valo-api/matchs-history.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
   match!: Matchs;
   matchs!: Matchs[];
 
-  constructor(private api: MatchsHistoryService, private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    this.route.queryParamMap.subscribe(params => {
+  constructor(
+    private api: MatchsHistoryService,
+    private route: ActivatedRoute
+  ) {
+    this.route.queryParamMap.subscribe((params) => {
       this.match = {
         name: params.get('username') || '',
         tag: params.get('tag') || '',
         region: params.get('region') || '',
-      }
+      };
     });
-    this.matchs = localStorage.getItem('matchs') != null ? JSON.parse(localStorage.getItem('matchs') || '{}') : [];
+  }
+
+  ngOnInit(): void {
+    this.matchs =
+      localStorage.getItem('matchs') != null
+        ? JSON.parse(localStorage.getItem('matchs') || '{}')
+        : [];
 
     if (this.matchs.length === 0) {
       this.api.getMatchs(this.match).subscribe({
@@ -32,7 +39,7 @@ export class ProfileComponent {
         },
         error: (error: any) => {
           console.error('Error fetching match history:', error);
-        }
+        },
       });
     }
   }

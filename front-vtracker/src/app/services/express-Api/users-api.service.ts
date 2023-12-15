@@ -1,37 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { Users } from '../models/users.model';
+import { Users } from '../../models/users.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersApiService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUsers(): Observable<Users[]> {
-    return this.http
-      .get('http://localhost:5000/api/users')
-      .pipe(
-        map((response: any) => {
-          if (response.data) {
-            return response.data.map((data: any) => {
-              return {
-                puuid: data.puuid,
-                user: data.name_lastname,
-                email: data.email,
-                crosshair: data.crosshair,
-                password: data.password,
-                agents: data.agents,
-                _id: data._id,
-              };
-            });
-          } else {
-            throw new Error('Error fetching users');
-          }
-        })
-      );
+    return this.http.get('http://localhost:5000/api/users').pipe(
+      map((response: any) => {
+        if (response.data) {
+          return response.data.map((data: any) => {
+            return {
+              puuid: data.puuid,
+              username: data.username,
+              email: data.email,
+              crosshair: data.crosshair,
+              password: data.password,
+              agents: data.agents,
+              _id: data._id,
+            };
+          });
+        } else {
+          throw new Error('Error fetching users');
+        }
+      })
+    );
   }
 
   getUser(id: string): Observable<Users> {
@@ -42,7 +39,7 @@ export class UsersApiService {
           if (response.status === 200 && response.body.data) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -64,7 +61,7 @@ export class UsersApiService {
           if (response.status === 201) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -88,7 +85,7 @@ export class UsersApiService {
           if (response.status === 200) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -110,7 +107,7 @@ export class UsersApiService {
           if (response.status === 200) {
             return {
               puuid: response.body.data.puuid,
-              user: response.body.data.name_lastname,
+              username: response.body.data.username,
               email: response.body.data.email,
               crosshair: response.body.data.crosshair,
               password: response.body.data.password,
@@ -123,6 +120,4 @@ export class UsersApiService {
         })
       );
   }
-
-
 }

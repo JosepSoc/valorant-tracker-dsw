@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <h2>Agents</h2>
+
+        <div class="form-group form-style">
+          <input
+            type="text"
+            [formControl]="name"
+            class="form-control"
+            placeholder="Name"
+          />
+        </div>
+
+        <div class="form-group form-style">
+          <input
+            type="text"
+            [formControl]="description"
+            class="form-control"
+            placeholder="Description"
+          />
+        </div>
+
+        <button (click)="previousValues()" type="button" class="btn">
+          Reset Agent
+        </button>
+
+        <button
+          mat-buttom
+          (click)="updateAgent()"
+          type="button"
+          class="btn btn-primary mb-2"
+          *ngIf="isUpdateChecker()"
+        >
+          Confirm
+        </button>
+
+        <button
+          mat-buttom
+          (click)="createAgent()"
+          type="button"
+          class="btn btn-primary mb-2"
+          *ngIf="!isUpdateChecker()"
+        >
+          Create
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

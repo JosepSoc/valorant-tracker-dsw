@@ -7,7 +7,7 @@ const repository = new UserRepository();
 export function sanitizeUserInput(req: Request, res: Response, next: NextFunction) {
   req.body.sanitizedInputData = {
     puuid: req.body.puuid,
-    name_lastname: req.body.name_lastname,
+    username: req.body.username,
     email: req.body.email,
     crosshair: req.body.crosshair,
     password: req.body.password,
@@ -39,8 +39,8 @@ export async function findOne(req: Request, res: Response) {
 
 export async function add(req: Request, res: Response) {
 
-  const { puuid, name_lastname, email, crosshair, password, agents } = req.body.sanitizedInputData;
-  const u = new User(puuid, name_lastname, email, crosshair, password, agents);
+  const { puuid, username, email, crosshair, password, agents } = req.body.sanitizedInputData;
+  const u = new User(puuid, username, email, crosshair, password, agents);
   const u_Created = await repository.add(u);
 
   if (u_Created === undefined) {

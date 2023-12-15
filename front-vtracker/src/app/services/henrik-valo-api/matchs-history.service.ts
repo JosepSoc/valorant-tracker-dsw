@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
-import { Matchs } from '../models/matchs.model';
-import { Agent } from '../models/agent.model';
+import { Matchs } from '../../models/matchs.model';
+import { Agent } from '../../models/agent.model';
 import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MatchsHistoryService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getMatchs(match: Matchs): Observable<Matchs[]> {
     return this.http
@@ -75,8 +75,9 @@ export class MatchsHistoryService {
     let agent: Agent = {};
     for (let i = 0; i < matchs.players.all_players.length; i++) {
       if (
-        (matchs.players.all_players[i].name).toLowerCase() === name.toLowerCase() &&
-        (matchs.players.all_players[i].tag).toLowerCase() === tag.toLowerCase()
+        matchs.players.all_players[i].name.toLowerCase() ===
+          name.toLowerCase() &&
+        matchs.players.all_players[i].tag.toLowerCase() === tag.toLowerCase()
       ) {
         agent = {
           matchid: matchs.metadata.matchid,

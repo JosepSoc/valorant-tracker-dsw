@@ -40,33 +40,43 @@
   align-items: center;
   height: 100px;
   background-color: $spc-head-blue;
-
-  .search-form {
+  .form-container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    width: 95%;
-    .custom-search {
-      .custom-search-input {
-        padding-right: 100px !important;
-        box-sizing: border-box;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        color: $icon-color;
+    width: 100%;
+    .inputs {
+      display: flex;
+      flex-direction: row;
+
+      width: 75%;
+      margin-left: 5px;
+      #input-name {
+        height: 40px;
+        border: 2px solid $spc-red;
+        padding: 10px;
+        width: 75%;
+        border-radius: 30px 0px 0px 30px;
       }
-      .custom-search-botton {
-        display: flex;
-        position: absolute;
-        color: $icon-color;
-        height: 100%;
-        right: 10px;
-        font-size: 20px;
-        background-color: transparent;
-        border: none;
-        border-radius: 100%;
+      #input-region {
+        height: 40px;
+        border: 2px solid $spc-red;
+        padding: 0px;
+        width: 25%;
+        border-radius: 0 30px 30px 0;
       }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: $spc-red;
+      font-size: 20px;
+    }
+    #cross-btn {
+      margin-right: 10px;
+      font-size: 20px;
     }
   }
 }
